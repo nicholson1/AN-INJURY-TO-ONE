@@ -77,6 +77,7 @@ public class Friend : MonoBehaviour
 
             
             rb.AddForce(dir * power, ForceMode2D.Impulse);
+            StartCoroutine(ThrowAnimation());
 
         }
         else
@@ -91,11 +92,14 @@ public class Friend : MonoBehaviour
         
     }
 
-    private IEnumerator ThrowAnimation()
+    public IEnumerator ThrowAnimation()
     {
         animator.SetTrigger("Jump");
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
         animator.SetBool("Grounded", true);
+        yield return null;
+          
+      
 
     }
 

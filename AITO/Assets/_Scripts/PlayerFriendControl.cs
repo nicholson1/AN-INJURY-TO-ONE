@@ -47,6 +47,8 @@ public class PlayerFriendControl : MonoBehaviour
     private float power = 0;
     private bool mouseDown = false;
 
+    private float bounceTimer = 0;
+
     private void Update()
     {
         if (mouseDown)
@@ -56,24 +58,31 @@ public class PlayerFriendControl : MonoBehaviour
                 power += Time.deltaTime * 3f;
 
                 //if (power is an integer)
-                if((float) Mathf.RoundToInt(power) == power)
-                {
-                    friends.Peek().GetComponentInChildren<Animator>().SetTrigger("Jump");
-                }
-            }
+                
             
-            var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint((transform.position));
+            }
+            pointer.transform.position = friends.Peek().transform.position;
+
+            bounceTimer -= Time.deltaTime;
+            if (bounceTimer <= 0)
+            {
+                StartCoroutine(friends.Peek().ThrowAnimation());
+                bounceTimer = 1.5f;
+            }
+
+            var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint((friends.Peek().transform.position));
             var _angle = Mathf.Atan2(_mousePos.y, _mousePos.x) * Mathf.Rad2Deg;
             pointer.transform.rotation = Quaternion.AngleAxis(_angle, Vector3.forward);
             
-            pointer.transform.localScale = new Vector3(power, power/2, 1);
+            pointer.transform.localScale = new Vector3(power, power/2 , 1);
         }
         
         if (friends.Count > 0 && Input.GetMouseButtonDown(0))
         {
-            
 
+            
             mouseDown = true;
+            pointer.transform.localScale = Vector3.zero;
             pointer.SetActive(true);
         }
 
@@ -94,7 +103,7 @@ public class PlayerFriendControl : MonoBehaviour
 
     private void ThrowMyFriend(float p)
     {
-        var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint((transform.position));
+        var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint(friends.Peek().transform.position);
         ThrowFriend(friends.Pop(), p/50, _mousePos - transform.position);
     }
 
