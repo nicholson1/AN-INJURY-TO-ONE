@@ -1,0 +1,1080 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.10f1 (1c7d0df0160b) revision 1867021'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 16223 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Neil/Documents/GitHub/AITO/AITO
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64538
+Successfully changed project path to: C:/Users/Neil/Documents/GitHub/AITO/AITO
+C:/Users/Neil/Documents/GitHub/AITO/AITO
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 72.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Neil/Documents/GitHub/AITO/AITO/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6600 XT (ID=0x73ff)
+    Vendor:   ATI
+    VRAM:     8146 MB
+    Driver:   31.0.12016.4002
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56908
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006891 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 68.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.544 seconds
+Domain Reload Profiling:
+	ReloadAssembly (545ms)
+		BeginReloadAssembly (65ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (378ms)
+			LoadAssemblies (63ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (86ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (229ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (68ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (114ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007662 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neil\Documents\GitHub\AITO\AITO\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neil\Documents\GitHub\AITO\AITO\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Domain Reload Profiling:
+	ReloadAssembly (868ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (676ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (221ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (314ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (198ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3380 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (113.5 KB). Loaded Objects now: 3837.
+Memory consumption went from 116.2 MB to 116.0 MB.
+Total: 2.905400 ms (FindLiveObjects: 0.248600 ms CreateObjectMapping: 0.093900 ms MarkObjects: 2.448000 ms  DeleteObjects: 0.113900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 85600.775525 seconds.
+  path: Assets/Scenes/TestPlatform.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestPlatform.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a55bdc261a03ef9b85e51f908f8b220b') in 0.012408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 479.918178 seconds.
+  path: Assets/Mega Bot Areas/Scenes
+  artifactKey: Guid(800a4e11f815a429c92eb560708f5a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Scenes using Guid(800a4e11f815a429c92eb560708f5a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f168f5d1b39cadb3db45fc8e1017c32') in 0.005218 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.885011 seconds.
+  path: Assets/Mega Bot Areas/Scenes/Demo.unity
+  artifactKey: Guid(e42ab34ebd34643588cafbb81214bf41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Scenes/Demo.unity using Guid(e42ab34ebd34643588cafbb81214bf41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70004f96c36fc142f1ad3e53eb5f9e62') in 0.005944 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008289 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neil\Documents\GitHub\AITO\AITO\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neil\Documents\GitHub\AITO\AITO\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.948 seconds
+Domain Reload Profiling:
+	ReloadAssembly (948ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (706ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (231ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (308ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (194ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3375 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (79.8 KB). Loaded Objects now: 3840.
+Memory consumption went from 116.1 MB to 116.0 MB.
+Total: 3.401800 ms (FindLiveObjects: 0.249300 ms CreateObjectMapping: 0.195000 ms MarkObjects: 2.846800 ms  DeleteObjects: 0.109900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10.833416 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art
+  artifactKey: Guid(47212422e74004c038d19f7ef908e5c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art using Guid(47212422e74004c038d19f7ef908e5c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6c0d77da633c1d2fe69fa62715de26c') in 0.010520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.750876 seconds.
+  path: Assets/Mega Bot Areas
+  artifactKey: Guid(83eaa6b6196f78c4a80f0e50da420ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas using Guid(83eaa6b6196f78c4a80f0e50da420ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b380241f6c3879db14df34791bd28d9b') in 0.005629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.456856 seconds.
+  path: Assets/Mega Bot Areas/Music
+  artifactKey: Guid(fc171fe6b3855496c9040418f293a9fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Music using Guid(fc171fe6b3855496c9040418f293a9fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224345cf434734eb44ced478e657d314') in 0.005331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 220.635330 seconds.
+  path: Assets/Scenes/TestPlatform.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/TestPlatform.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e7eb3d9b8615038b2ed01c73d7733ba5') in 0.070737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-frames/Water Animation.anim
+  artifactKey: Guid(086482993f2124ef6a36ec8f7fbc07ed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-frames/Water Animation.anim using Guid(086482993f2124ef6a36ec8f7fbc07ed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9113c4f3168469dfe6f13bdaec1883e6') in 0.053883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-tower-frames/Water Tower Animation.anim
+  artifactKey: Guid(3929fa88e5cf64c0cb7ba87cc1a801d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-tower-frames/Water Tower Animation.anim using Guid(3929fa88e5cf64c0cb7ba87cc1a801d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '59c3b1537634f8ec7e6360e9e513c16b') in 0.011659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/water-anim-tank-orange3.png
+  artifactKey: Guid(97d8344bbde514ecc886b24b5cd1e499) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/water-anim-tank-orange3.png using Guid(97d8344bbde514ecc886b24b5cd1e499) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5ee3dfb56c368354a3857c6ffb08954f') in 0.057803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-tower-frames/water-anim-tower1.png
+  artifactKey: Guid(5215934b3cf3a4aca89913966236bbd1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-tower-frames/water-anim-tower1.png using Guid(5215934b3cf3a4aca89913966236bbd1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2587a4a330776ef68d885e190e90b7d9') in 0.017914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/water-anim-tank-orange1.png
+  artifactKey: Guid(cf3501c1229d942aa9776eff012820b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/water-anim-tank-orange1.png using Guid(cf3501c1229d942aa9776eff012820b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0d3de105fab2e14b46989e7d3859c1bc') in 0.017494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-tower-frames/water-anim-tower2.png
+  artifactKey: Guid(2a3c5781f65284ca6bc4a6294d9e3ddc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-tower-frames/water-anim-tower2.png using Guid(2a3c5781f65284ca6bc4a6294d9e3ddc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0e105c781cdf80fb91cdf7bdfb2c602d') in 0.016522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Pipes forest/tileset.png
+  artifactKey: Guid(7cccb3f961c324d2aaf93dbe197b1027) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Pipes forest/tileset.png using Guid(7cccb3f961c324d2aaf93dbe197b1027) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e73b8add0424ec7fe8e6417a1571b7b0') in 0.015769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/layers/background.png
+  artifactKey: Guid(1b726b366ed0a407f9fd951f021c4930) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/layers/background.png using Guid(1b726b366ed0a407f9fd951f021c4930) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '008f6f1544c00804097c95f6f33ecba2') in 0.016240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/Water orange Animation.anim
+  artifactKey: Guid(c56a66b176e344db08737a5053b41663) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/Water orange Animation.anim using Guid(c56a66b176e344db08737a5053b41663) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '159d405063d934191b75f174c64f4648') in 0.011937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-purple-frames/water-anim-tank-purple3.png
+  artifactKey: Guid(cd4f9e96690d04c97a0f0990dbf2e859) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-purple-frames/water-anim-tank-purple3.png using Guid(cd4f9e96690d04c97a0f0990dbf2e859) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f1143f29bb51b29ed6e8289634a8190') in 0.018502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/background.png
+  artifactKey: Guid(b1488284639c4427b92cc39782393fdc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/background.png using Guid(b1488284639c4427b92cc39782393fdc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '571b87de3f65760b07106f13afa17720') in 0.017227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-frames/water-anim2.png
+  artifactKey: Guid(309f19602960d4ff29b55b8c269acec8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-frames/water-anim2.png using Guid(309f19602960d4ff29b55b8c269acec8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '84d1df8d23aa56f0f4081e38b576f8c5') in 0.016321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-purple-frames/Water purple Animation.anim
+  artifactKey: Guid(ecc4320078acd46129bb1e479030559e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-purple-frames/Water purple Animation.anim using Guid(ecc4320078acd46129bb1e479030559e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '76e339c6246a944976279e820e5b0ce3') in 0.010610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset.png
+  artifactKey: Guid(f29b820a2b25d49f8898f1bffb30f70a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset.png using Guid(f29b820a2b25d49f8898f1bffb30f70a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fd2c03438053e27c7538cf83ef09ccc5') in 0.016545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-purple-frames/water-anim-tank-purple1 (1).controller
+  artifactKey: Guid(1703fe7fcfc9844089c190bfd90167e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-purple-frames/water-anim-tank-purple1 (1).controller using Guid(1703fe7fcfc9844089c190bfd90167e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4182ecb5b155774fd115315ed5c1623f') in 0.012138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/layers/tileset.png
+  artifactKey: Guid(b882b6b0ff7984b9088ae4698d7b338f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/layers/tileset.png using Guid(b882b6b0ff7984b9088ae4698d7b338f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9bb1458072fa39e1c5c424b4b3206fc4') in 0.020070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/water-anim-tank-orange2.png
+  artifactKey: Guid(4cd45adab8c7341c7a016eec24102236) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/anims/water-orange-frames/water-anim-tank-orange2.png using Guid(4cd45adab8c7341c7a016eec24102236) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3244101d29da0a27d23cf80f88051a0c') in 0.016522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Music/Pipes Under Music/pipes under.wav
+  artifactKey: Guid(d7f49a82c66d34ccea6ec5c6f921bb13) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Mega Bot Areas/Music/Pipes Under Music/pipes under.wav using Guid(d7f49a82c66d34ccea6ec5c6f921bb13) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd5c4c8cf44e2855402977de572947cfd') in 0.071986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.062056 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Bay area/layers/tileset.png
+  artifactKey: Guid(b882b6b0ff7984b9088ae4698d7b338f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Bay area/layers/tileset.png using Guid(b882b6b0ff7984b9088ae4698d7b338f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4279abcb9f6eed29b40b7a094e27a491') in 0.092193 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (77.0 KB). Loaded Objects now: 3848.
+Memory consumption went from 53.7 MB to 53.6 MB.
+Total: 3.055000 ms (FindLiveObjects: 0.189700 ms CreateObjectMapping: 0.127200 ms MarkObjects: 2.670900 ms  DeleteObjects: 0.066500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014856 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neil\Documents\GitHub\AITO\AITO\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Neil\Documents\GitHub\AITO\AITO\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 97.58 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.195 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1196ms)
+		BeginReloadAssembly (237ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (86ms)
+		EndReloadAssembly (864ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (282ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (403ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (98ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (178ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.91 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4184 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (221.0 KB). Loaded Objects now: 4652.
+Memory consumption went from 159.6 MB to 159.4 MB.
+Total: 3.669500 ms (FindLiveObjects: 0.253000 ms CreateObjectMapping: 0.203500 ms MarkObjects: 3.054900 ms  DeleteObjects: 0.157300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 206.991643 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset.png
+  artifactKey: Guid(f29b820a2b25d49f8898f1bffb30f70a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset.png using Guid(f29b820a2b25d49f8898f1bffb30f70a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4094b76836ec81b9a6b9b9edc762d650') in 0.057507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 174.445853 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_1.asset
+  artifactKey: Guid(a3d7d1986a00e5d4b824f57a4eec12fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_1.asset using Guid(a3d7d1986a00e5d4b824f57a4eec12fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eca9e9253880aab3863f6572a00e3eaf') in 0.078251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_32.asset
+  artifactKey: Guid(543882d6363f1154e8280154ed150301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_32.asset using Guid(543882d6363f1154e8280154ed150301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61d690f33416cff9a56ed7e59b27d06') in 0.012710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_13.asset
+  artifactKey: Guid(7b957f6084e02fe479665ec6448656ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_13.asset using Guid(7b957f6084e02fe479665ec6448656ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d947ff78ac4ddb27641bdd9fc254e4') in 0.012451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_36.asset
+  artifactKey: Guid(85f5663ff1e857949982275e2eae3a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_36.asset using Guid(85f5663ff1e857949982275e2eae3a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ab19ef1e53a57899edd4d8e9b684fc') in 0.013060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_37.asset
+  artifactKey: Guid(6e87e7126cec71a46bd66c173aaafda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_37.asset using Guid(6e87e7126cec71a46bd66c173aaafda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c985dbf5b0be1fff0cb5508caeb111db') in 0.012468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_43.asset
+  artifactKey: Guid(4540e23dd1932e5489bca21885ae68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_43.asset using Guid(4540e23dd1932e5489bca21885ae68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb0ecff5dda476c132d3e7277e0ee6d9') in 0.012655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_29.asset
+  artifactKey: Guid(8fda6dbea96c71e449f885ec8bcfdba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_29.asset using Guid(8fda6dbea96c71e449f885ec8bcfdba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7857c326848b6f43958b08d871663d41') in 0.011655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_16.asset
+  artifactKey: Guid(eb3d081bf733ee74b921f3b74a415a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_16.asset using Guid(eb3d081bf733ee74b921f3b74a415a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea9755926e9a23933cf134e0d252f161') in 0.012161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_4.asset
+  artifactKey: Guid(ab05fb8bf684c704a8966ea14961c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_4.asset using Guid(ab05fb8bf684c704a8966ea14961c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c6e6e74834557a8e03625374ac2e960') in 0.013469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset
+  artifactKey: Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset using Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd80ee5178af546bcc5388c461b8d01e9') in 0.012944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_26.asset
+  artifactKey: Guid(88b1b1b064bcb4946add88dc9d6e61fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_26.asset using Guid(88b1b1b064bcb4946add88dc9d6e61fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13bd2a32628dcda430d12d9e5c372013') in 0.011843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_8.asset
+  artifactKey: Guid(3ab65a379926ac04e8dccbf709e70e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_8.asset using Guid(3ab65a379926ac04e8dccbf709e70e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e269ecf12205ef977bd541683d62436') in 0.011837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_31.asset
+  artifactKey: Guid(302e86bfdac7dc049ab338ce9677d7d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_31.asset using Guid(302e86bfdac7dc049ab338ce9677d7d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a1e50b1678bdc1ce58c043201911c8d') in 0.010793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_41.asset
+  artifactKey: Guid(88ee21c3a1cbe0743b57ffeaa70fd284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_41.asset using Guid(88ee21c3a1cbe0743b57ffeaa70fd284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb3c00d257307fde80e065919bfe132') in 0.009500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset
+  artifactKey: Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset using Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16acac6f1099eae0b4d28b690de2ed92') in 0.010495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_23.asset
+  artifactKey: Guid(7f910b27209aa594984a46abb322e6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_23.asset using Guid(7f910b27209aa594984a46abb322e6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca882bfed08f08b555a5f12a105de1e0') in 0.011396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset
+  artifactKey: Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset using Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '500be7538b2f872cd0ce4fece55ac380') in 0.009048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_44.asset
+  artifactKey: Guid(aa622506d4ded714f9a2230ea0cfbacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_44.asset using Guid(aa622506d4ded714f9a2230ea0cfbacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69cafab60f318f0bf26e2c531d80a732') in 0.010925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset
+  artifactKey: Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset using Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae5620a13f4f9143f4789ede4177affe') in 0.010977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_19.asset
+  artifactKey: Guid(6c58194fd7d97cf40a737fc3a178879f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_19.asset using Guid(6c58194fd7d97cf40a737fc3a178879f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a461d5276ed295d6295250346f9407ab') in 0.011365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_24.asset
+  artifactKey: Guid(275c26149c0734e43b598655a8f472d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_24.asset using Guid(275c26149c0734e43b598655a8f472d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a352b70dfda4b395c050f51548f1888') in 0.010906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.494773 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_0.asset
+  artifactKey: Guid(d7d56870b6e16fc47876ac2ff437dc26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_0.asset using Guid(d7d56870b6e16fc47876ac2ff437dc26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1e08fa6a9ecd24f7d9b65b7a366215') in 0.007110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_6.asset
+  artifactKey: Guid(d50d6c1b2dee96a4e9d05ad089c2c5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_6.asset using Guid(d50d6c1b2dee96a4e9d05ad089c2c5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10a80beeb460ff9d9fdeca3fe903646f') in 0.007607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_18.asset
+  artifactKey: Guid(d316457922ce6974d9319e98f9f1eee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_18.asset using Guid(d316457922ce6974d9319e98f9f1eee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef4e1095c8e6abbe8d4c318040814ab5') in 0.006886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_5.asset
+  artifactKey: Guid(dbeffa27ecc06b8418e7c910fd206856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_5.asset using Guid(dbeffa27ecc06b8418e7c910fd206856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ca1a35edac2a0b62e268c5997c5d85') in 0.007361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_32.asset
+  artifactKey: Guid(543882d6363f1154e8280154ed150301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_32.asset using Guid(543882d6363f1154e8280154ed150301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc855364649bc7c9d9e6cc5224a5d16') in 0.007527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_2.asset
+  artifactKey: Guid(aac14a31120b64548ac3e3a0861ce3a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_2.asset using Guid(aac14a31120b64548ac3e3a0861ce3a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0eab1907451456c8923d86e4677db52') in 0.006782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_13.asset
+  artifactKey: Guid(7b957f6084e02fe479665ec6448656ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_13.asset using Guid(7b957f6084e02fe479665ec6448656ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2fbbcd9795837d3f3e4de8043a1149a') in 0.009576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_39.asset
+  artifactKey: Guid(d7e0f80717727224c88c00a6b0a15a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_39.asset using Guid(d7e0f80717727224c88c00a6b0a15a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e2941e27716bbb39c1706911b6294a') in 0.007112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_43.asset
+  artifactKey: Guid(4540e23dd1932e5489bca21885ae68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_43.asset using Guid(4540e23dd1932e5489bca21885ae68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240e460fe08d09bd2364df377ab6be1d') in 0.007888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_25.asset
+  artifactKey: Guid(bfcdcc0583301684793bf59c1d9368c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_25.asset using Guid(bfcdcc0583301684793bf59c1d9368c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '480acd3d30bf510ffc1414e3758313b3') in 0.007047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_34.asset
+  artifactKey: Guid(44ef63d826938334099b314312f82179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_34.asset using Guid(44ef63d826938334099b314312f82179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3832f1f829f9987602a3bedf1af11273') in 0.006514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_30.asset
+  artifactKey: Guid(05da3aaa356f1c24591764baea807164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_30.asset using Guid(05da3aaa356f1c24591764baea807164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaaff9cb0a3c414ed0ce58c475bc16e4') in 0.006900 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_10.asset
+  artifactKey: Guid(e4c4c5fe1bcd0b542a6b7604718b4600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_10.asset using Guid(e4c4c5fe1bcd0b542a6b7604718b4600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e8a0896a7025b30734ec0b7e8c8f6d') in 0.006565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_31.asset
+  artifactKey: Guid(302e86bfdac7dc049ab338ce9677d7d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_31.asset using Guid(302e86bfdac7dc049ab338ce9677d7d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464117c99529ae876473666670f7240d') in 0.006805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_38.asset
+  artifactKey: Guid(79f3d33c52295204d984dfe5e3ffb9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_38.asset using Guid(79f3d33c52295204d984dfe5e3ffb9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cc7aff2b129d55549eee9cb4a4dc580') in 0.006354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_23.asset
+  artifactKey: Guid(7f910b27209aa594984a46abb322e6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_23.asset using Guid(7f910b27209aa594984a46abb322e6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2bf71a0dd8efb9e4b1bdef9834acce5') in 0.006600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset
+  artifactKey: Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset using Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '533092684de06a22bda848facb7e305a') in 0.006184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset
+  artifactKey: Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset using Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf64f9cda5f7a54986624c733da77baa') in 0.007617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_45.asset
+  artifactKey: Guid(57514cde7d58ced4196b206d5d72daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_45.asset using Guid(57514cde7d58ced4196b206d5d72daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b56703f6184068a622b1da54db2b6e') in 0.006615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.322564 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_0.asset
+  artifactKey: Guid(d7d56870b6e16fc47876ac2ff437dc26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_0.asset using Guid(d7d56870b6e16fc47876ac2ff437dc26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f12cc00c55faf0b293fdb52f18bd7e50') in 0.006737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_6.asset
+  artifactKey: Guid(d50d6c1b2dee96a4e9d05ad089c2c5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_6.asset using Guid(d50d6c1b2dee96a4e9d05ad089c2c5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5124962136584e00ec61fcf223ae8edf') in 0.006844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_32.asset
+  artifactKey: Guid(543882d6363f1154e8280154ed150301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_32.asset using Guid(543882d6363f1154e8280154ed150301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65280dae35ac35d2fc4be446a1c7c19f') in 0.006860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_13.asset
+  artifactKey: Guid(7b957f6084e02fe479665ec6448656ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_13.asset using Guid(7b957f6084e02fe479665ec6448656ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a77fca4e67cf4b3ed1281c80357eaf') in 0.007059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_36.asset
+  artifactKey: Guid(85f5663ff1e857949982275e2eae3a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_36.asset using Guid(85f5663ff1e857949982275e2eae3a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31d73795a54ace1f3c5f23971b9a92b1') in 0.008364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_37.asset
+  artifactKey: Guid(6e87e7126cec71a46bd66c173aaafda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_37.asset using Guid(6e87e7126cec71a46bd66c173aaafda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759b4157a92f94e15e875a8a100d2bf7') in 0.007762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_33.asset
+  artifactKey: Guid(9dcf6a07304f1c8499db8c13f6193f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_33.asset using Guid(9dcf6a07304f1c8499db8c13f6193f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee10f22d4b945efbc670574daa689904') in 0.007769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_35.asset
+  artifactKey: Guid(9845aff743f0ca44ea6c3e73cedb1b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_35.asset using Guid(9845aff743f0ca44ea6c3e73cedb1b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d8fbb8ac2eebc931b5f011d2e4aeaca') in 0.008269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_4.asset
+  artifactKey: Guid(ab05fb8bf684c704a8966ea14961c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_4.asset using Guid(ab05fb8bf684c704a8966ea14961c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41591db35cf3ad42e25e0d20e6125f5d') in 0.007302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset
+  artifactKey: Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset using Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5094eed54a5d1c3d282edb887868b0ea') in 0.007159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_7.asset
+  artifactKey: Guid(514b41f666cecea4491b1e714c333f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_7.asset using Guid(514b41f666cecea4491b1e714c333f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288cd3ef39de811013d67a1a52b013e7') in 0.006363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_8.asset
+  artifactKey: Guid(3ab65a379926ac04e8dccbf709e70e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_8.asset using Guid(3ab65a379926ac04e8dccbf709e70e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '716472688bde5a9623f9def6083ef5a0') in 0.006673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_17.asset
+  artifactKey: Guid(1778caba443d85f4f8c65280c5e1e2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_17.asset using Guid(1778caba443d85f4f8c65280c5e1e2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089427790b2754a3ac7d3ead3305874e') in 0.006782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset
+  artifactKey: Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset using Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d586149627e63cfa2a159951238c071') in 0.007421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_23.asset
+  artifactKey: Guid(7f910b27209aa594984a46abb322e6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_23.asset using Guid(7f910b27209aa594984a46abb322e6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20597d8be02a6000382de9f4eb232c24') in 0.006897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_44.asset
+  artifactKey: Guid(aa622506d4ded714f9a2230ea0cfbacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_44.asset using Guid(aa622506d4ded714f9a2230ea0cfbacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65de8123e7ec14599eb20292971b8c46') in 0.006625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset
+  artifactKey: Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset using Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8892394cff164a68353b7a8ca29b91') in 0.006429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_24.asset
+  artifactKey: Guid(275c26149c0734e43b598655a8f472d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_24.asset using Guid(275c26149c0734e43b598655a8f472d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9685f3b23b20c0147353d6678369f32') in 0.007244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 218.037416 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset.png
+  artifactKey: Guid(f29b820a2b25d49f8898f1bffb30f70a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset.png using Guid(f29b820a2b25d49f8898f1bffb30f70a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd78b6131a8aa056aac40ab78a18e0e2') in 0.108739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_36.asset
+  artifactKey: Guid(85f5663ff1e857949982275e2eae3a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_36.asset using Guid(85f5663ff1e857949982275e2eae3a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4534eb20ea8b3e2de761cc2796cffbf5') in 0.007274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_37.asset
+  artifactKey: Guid(6e87e7126cec71a46bd66c173aaafda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_37.asset using Guid(6e87e7126cec71a46bd66c173aaafda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0779ce360352028ba03a5ea5322a3af3') in 0.007383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_43.asset
+  artifactKey: Guid(4540e23dd1932e5489bca21885ae68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_43.asset using Guid(4540e23dd1932e5489bca21885ae68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baad082a64fdf0dbe32e81d11da22db9') in 0.006611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_29.asset
+  artifactKey: Guid(8fda6dbea96c71e449f885ec8bcfdba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_29.asset using Guid(8fda6dbea96c71e449f885ec8bcfdba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1da504e5664b824491240cbecbdbe271') in 0.007737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_16.asset
+  artifactKey: Guid(eb3d081bf733ee74b921f3b74a415a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_16.asset using Guid(eb3d081bf733ee74b921f3b74a415a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f5306a3404d75ab01ad7205a68832ec') in 0.006937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_34.asset
+  artifactKey: Guid(44ef63d826938334099b314312f82179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_34.asset using Guid(44ef63d826938334099b314312f82179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07e163b0ccbe85e503361a3dd66b88bb') in 0.007695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset
+  artifactKey: Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset using Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d4c1017b27c221aaa58527b0e5dc6b4') in 0.006796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_7.asset
+  artifactKey: Guid(514b41f666cecea4491b1e714c333f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_7.asset using Guid(514b41f666cecea4491b1e714c333f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f1dd7b7a9dd6484e0e25cfd1fd8483') in 0.006238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_10.asset
+  artifactKey: Guid(e4c4c5fe1bcd0b542a6b7604718b4600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_10.asset using Guid(e4c4c5fe1bcd0b542a6b7604718b4600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c70ccd24625f5121452a0c8ffd9c7dc') in 0.010276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_20.asset
+  artifactKey: Guid(f72d7a0272025284883846003f299008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_20.asset using Guid(f72d7a0272025284883846003f299008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '066e957b826dc525ad4854663e5afd67') in 0.006845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_1.asset
+  artifactKey: Guid(a3d7d1986a00e5d4b824f57a4eec12fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_1.asset using Guid(a3d7d1986a00e5d4b824f57a4eec12fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8816a22e788561d98378a0d3a6d5f67e') in 0.006130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset
+  artifactKey: Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset using Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936d209f2b0c52bdae87221d6d59cf47') in 0.006536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_22.asset
+  artifactKey: Guid(d6d3cf55b8fb6c74e983a878113d2633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_22.asset using Guid(d6d3cf55b8fb6c74e983a878113d2633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b570e9fba23e4eb8dac5e8b85880e52') in 0.007790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_15.asset
+  artifactKey: Guid(a09d3a3023827894d954018257891b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_15.asset using Guid(a09d3a3023827894d954018257891b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a8313e801f64eb6da45060e150c1b7') in 0.006707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset
+  artifactKey: Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset using Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c96c04dd4aeaf53c0d6491bb1bd59bd') in 0.006810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_42.asset
+  artifactKey: Guid(d4e746e5cc60020409fcf96e8f5f8ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_42.asset using Guid(d4e746e5cc60020409fcf96e8f5f8ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20947228515c8390509abe090bc94883') in 0.007016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset
+  artifactKey: Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset using Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c18c7e4f00a0bd104b6b9929a1b35f7') in 0.006944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_45.asset
+  artifactKey: Guid(57514cde7d58ced4196b206d5d72daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_45.asset using Guid(57514cde7d58ced4196b206d5d72daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edaae57ab6eae9df1b123fc5bfbe8bb0') in 0.007318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_24.asset
+  artifactKey: Guid(275c26149c0734e43b598655a8f472d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_24.asset using Guid(275c26149c0734e43b598655a8f472d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5befdcfac17dafa8923eaf8c0a6c6083') in 0.006372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.871787 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_0.asset
+  artifactKey: Guid(d7d56870b6e16fc47876ac2ff437dc26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_0.asset using Guid(d7d56870b6e16fc47876ac2ff437dc26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55ef8ea0511952acf961cae7f54274aa') in 0.006467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_6.asset
+  artifactKey: Guid(d50d6c1b2dee96a4e9d05ad089c2c5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_6.asset using Guid(d50d6c1b2dee96a4e9d05ad089c2c5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71622fe434715be6035e9dc4d81cdb7c') in 0.007076 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_5.asset
+  artifactKey: Guid(dbeffa27ecc06b8418e7c910fd206856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_5.asset using Guid(dbeffa27ecc06b8418e7c910fd206856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b0856f9c9bbaf6fd85c6fc5f7435139') in 0.006993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_2.asset
+  artifactKey: Guid(aac14a31120b64548ac3e3a0861ce3a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_2.asset using Guid(aac14a31120b64548ac3e3a0861ce3a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2939ae77ced346913415825f45b89c') in 0.006685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_40.asset
+  artifactKey: Guid(e7ecf7bc7c99b8a478839ab91f4adab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_40.asset using Guid(e7ecf7bc7c99b8a478839ab91f4adab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0fc509400e36c8208591195142ec508') in 0.007202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_39.asset
+  artifactKey: Guid(d7e0f80717727224c88c00a6b0a15a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_39.asset using Guid(d7e0f80717727224c88c00a6b0a15a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '264a3ca5d973293d0bafe69903e13e9e') in 0.008010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_33.asset
+  artifactKey: Guid(9dcf6a07304f1c8499db8c13f6193f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_33.asset using Guid(9dcf6a07304f1c8499db8c13f6193f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '635e3bd03b6c2bddbf95262c922bd4be') in 0.007379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_35.asset
+  artifactKey: Guid(9845aff743f0ca44ea6c3e73cedb1b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_35.asset using Guid(9845aff743f0ca44ea6c3e73cedb1b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af34b15c21c7cf062d23ced406fd955') in 0.006954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_25.asset
+  artifactKey: Guid(bfcdcc0583301684793bf59c1d9368c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_25.asset using Guid(bfcdcc0583301684793bf59c1d9368c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9972ee5cd6ec1f43d51e2c6caf92373b') in 0.006835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_4.asset
+  artifactKey: Guid(ab05fb8bf684c704a8966ea14961c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_4.asset using Guid(ab05fb8bf684c704a8966ea14961c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c58e377b32c4b87e7f0a1083f120501c') in 0.007353 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset
+  artifactKey: Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_9.asset using Guid(b7a8451809fddf44eab105c4e9cde4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46a95ed4caf5398ef60fc4e234e9150') in 0.007785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_7.asset
+  artifactKey: Guid(514b41f666cecea4491b1e714c333f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_7.asset using Guid(514b41f666cecea4491b1e714c333f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70a196a1e38c6671126ae3c58d4cecd7') in 0.008074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_10.asset
+  artifactKey: Guid(e4c4c5fe1bcd0b542a6b7604718b4600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_10.asset using Guid(e4c4c5fe1bcd0b542a6b7604718b4600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcabb9a1e22c0694575af8059d6ce9a') in 0.007322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_20.asset
+  artifactKey: Guid(f72d7a0272025284883846003f299008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_20.asset using Guid(f72d7a0272025284883846003f299008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dc4aac2f6bec107e4ef7239a2dc9448') in 0.006407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_17.asset
+  artifactKey: Guid(1778caba443d85f4f8c65280c5e1e2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_17.asset using Guid(1778caba443d85f4f8c65280c5e1e2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b3341df05d40c90daee33e4cfecd5e6') in 0.006231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_38.asset
+  artifactKey: Guid(79f3d33c52295204d984dfe5e3ffb9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_38.asset using Guid(79f3d33c52295204d984dfe5e3ffb9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998399ea0316ed9ade06d35526ff44b8') in 0.007815 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset
+  artifactKey: Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_27.asset using Guid(6fae3b23ce1959d4fbd468aee5044691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e04df6312eb433217210723a13eb262') in 0.006947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_15.asset
+  artifactKey: Guid(a09d3a3023827894d954018257891b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_15.asset using Guid(a09d3a3023827894d954018257891b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b634a9b10aa7d955f985533bee58f3df') in 0.006439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset
+  artifactKey: Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_28.asset using Guid(34dff371e34d4f44c9a18a1dec05d135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5690d5c214323a0e28130ce124c7e9d') in 0.007071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset
+  artifactKey: Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_12.asset using Guid(7d7ec57f3af0a034e9956a0dc8f81522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c6174d8efae6d350cfffb548569af4') in 0.006489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_45.asset
+  artifactKey: Guid(57514cde7d58ced4196b206d5d72daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mega Bot Areas/Pixel Art/Under Pipes Area/tileset_45.asset using Guid(57514cde7d58ced4196b206d5d72daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee317f9f17f10930072de4cf6a0cf4c') in 0.006529 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
