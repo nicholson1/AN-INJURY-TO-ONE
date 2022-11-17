@@ -30,8 +30,6 @@ public class Friend : MonoBehaviour
     {
         PlayerFriendControl.CollectFriend -= CollectedTrigger;
         PlayerFriendControl.ThrowFriend -= Throw;
-
-
     }
 
     private void Update()
@@ -102,6 +100,5 @@ public class Friend : MonoBehaviour
       
 
     }
-
 
 }

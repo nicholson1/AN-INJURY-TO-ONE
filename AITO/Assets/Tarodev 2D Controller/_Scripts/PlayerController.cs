@@ -297,5 +297,41 @@ namespace TarodevController {
         }
 
         #endregion
+
+        //Hazard effects
+        private Rigidbody2D rb;
+        private void Start()
+        {
+            //receiving message on what hazard was hit
+            Hazard.PlHazardHit += HazardReact;
+
+            rb = GetComponent<Rigidbody2D>();
+        }
+
+        private void OnDestroy()
+        {
+            //unsub from hazards
+            Hazard.PlHazardHit -= HazardReact;
+        }
+
+        private void HazardReact(Hazard.HazardType Haz)
+        {
+            switch (Haz)
+            {
+                case Hazard.HazardType.Lava:
+                    Debug.Log("player lava");
+                    break;
+                case Hazard.HazardType.Oil:
+                    Debug.Log("player oil");
+                    //I still need to make this go away for a while lol
+                    //_acceleration += 20;
+                    break;
+                case Hazard.HazardType.Electro:
+                    Debug.Log("player zap");
+                    //I still need to make this go away after a sec lol
+                    //rb.AddForce(new Vector2(-5, 0), ForceMode2D.Impulse);
+                    break;
+            }
+        }
     }
 }
