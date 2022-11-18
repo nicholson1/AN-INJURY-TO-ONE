@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -31,6 +32,7 @@ namespace TarodevController {
             if(!_active) return;
             // Calculate velocity
             Velocity = (transform.position - _lastPosition) / Time.deltaTime;
+            
             _lastPosition = transform.position;
 
             GatherInput();
@@ -300,12 +302,19 @@ namespace TarodevController {
 
         //Hazard effects
         private Rigidbody2D rb;
+        private float defAccel;
+        private float accelBump = 50f;
+        //private bool LavaOn = false;
         private void Start()
         {
             //receiving message on what hazard was hit
             Hazard.PlHazardHit += HazardReact;
 
+            //getting the rigidbody so we can add force
             rb = GetComponent<Rigidbody2D>();
+
+            //saving the player's default acceleration so we can get back to it after the oil slick
+            defAccel = _acceleration;
         }
 
         private void OnDestroy()
@@ -314,24 +323,52 @@ namespace TarodevController {
             Hazard.PlHazardHit -= HazardReact;
         }
 
-        private void HazardReact(Hazard.HazardType Haz)
+        //function that sees what hazard was hit and what should happen because of it
+        private void HazardReact(Hazard.HazardType Haz, Transform respawn)
         {
             switch (Haz)
             {
                 case Hazard.HazardType.Lava:
                     Debug.Log("player lava");
+                    //LavaOn = true;
+                    LavaEffect(respawn);
                     break;
                 case Hazard.HazardType.Oil:
                     Debug.Log("player oil");
-                    //I still need to make this go away for a while lol
-                    //_acceleration += 20;
+                    StartCoroutine(OilEffect());
                     break;
                 case Hazard.HazardType.Electro:
                     Debug.Log("player zap");
-                    //I still need to make this go away after a sec lol
-                    //rb.AddForce(new Vector2(-5, 0), ForceMode2D.Impulse);
+                    StartCoroutine(ElectroEffect());
                     break;
             }
+        }
+
+        //when the player hits the oil slick, their acceleration goes up
+        //and then after a couple non-oily seconds it goes back down
+        private IEnumerator OilEffect() 
+        {
+            _acceleration += accelBump;
+            yield return new WaitForSeconds(5f);
+            _acceleration = defAccel;
+        }
+
+        //when the player hits the electricity, they get thrown back
+        //and then after a couple seconds they come to a stop
+        private IEnumerator ElectroEffect() 
+        {
+            rb.AddForce(new Vector2(-10, 0), ForceMode2D.Impulse);
+            yield return new WaitForSeconds(2f);
+            rb.velocity = new Vector2(0, 0);
+        }
+
+        //theoretically when the player hits the lava, they get respawned at the current spawn point
+        //but instead they get launched into the absolute fucking void
+        //I'm worried that this is because of how the player's velocity is calculated in the character controller
+        private void LavaEffect(Transform rPoint) 
+        {
+            //transform.position = rPoint.position;
+            Debug.Log("right now lava punts you into the infinite");
         }
     }
 }
