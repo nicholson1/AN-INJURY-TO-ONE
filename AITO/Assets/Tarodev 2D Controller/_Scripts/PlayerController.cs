@@ -30,20 +30,25 @@ namespace TarodevController {
         
         private void Update() {
             if(!_active) return;
-            // Calculate velocity
-            Velocity = (transform.position - _lastPosition) / Time.deltaTime;
+
+            if (WalkOff != true) 
+            {
+                // Calculate velocity
+                Velocity = (transform.position - _lastPosition) / Time.deltaTime;
             
-            _lastPosition = transform.position;
+                _lastPosition = transform.position;
 
-            GatherInput();
-            RunCollisionChecks();
+                GatherInput();
+                RunCollisionChecks();
 
-            CalculateWalk(); // Horizontal movement
-            CalculateJumpApex(); // Affects fall speed, so calculate before gravity
-            CalculateGravity(); // Vertical movement
-            CalculateJump(); // Possibly overrides vertical
+                CalculateWalk(); // Horizontal movement
+                CalculateJumpApex(); // Affects fall speed, so calculate before gravity
+                CalculateGravity(); // Vertical movement
+                CalculateJump(); // Possibly overrides vertical
 
-            MoveCharacter(); // Actually perform the axis movement
+                MoveCharacter(); // Actually perform the axis movement
+            }
+            
         }
 
 
@@ -303,8 +308,11 @@ namespace TarodevController {
         //Hazard effects
         private Rigidbody2D rb;
         private float defAccel;
-        private float accelBump = 50f;
+        private float accelBump = 15f;
+        private float defDeccel;
+        private float decelBump = -15f;
         //private bool LavaOn = false;
+        private bool WalkOff = false;
         private void Start()
         {
             //receiving message on what hazard was hit
@@ -315,6 +323,7 @@ namespace TarodevController {
 
             //saving the player's default acceleration so we can get back to it after the oil slick
             defAccel = _acceleration;
+            defDeccel = _deAcceleration;
         }
 
         private void OnDestroy()
@@ -324,6 +333,7 @@ namespace TarodevController {
         }
 
         //function that sees what hazard was hit and what should happen because of it
+        //these all now work, but they need some tuning
         private void HazardReact(Hazard.HazardType Haz, Transform respawn)
         {
             switch (Haz)
@@ -331,7 +341,9 @@ namespace TarodevController {
                 case Hazard.HazardType.Lava:
                     Debug.Log("player lava");
                     //LavaOn = true;
-                    LavaEffect(respawn);
+                    WalkOff = true;
+                    //LavaEffect(respawn);
+                    StartCoroutine(LavaRespawn(respawn));
                     break;
                 case Hazard.HazardType.Oil:
                     Debug.Log("player oil");
@@ -344,13 +356,15 @@ namespace TarodevController {
             }
         }
 
-        //when the player hits the oil slick, their acceleration goes up
-        //and then after a couple non-oily seconds it goes back down
+        //when the player hits the oil slick, their acceleration goes up and deceleration goes down
+        //and then after a couple non-oily seconds it goes back down and decel goes back up
         private IEnumerator OilEffect() 
         {
             _acceleration += accelBump;
+            _deAcceleration += decelBump;
             yield return new WaitForSeconds(5f);
             _acceleration = defAccel;
+            _deAcceleration = defDeccel;
         }
 
         //when the player hits the electricity, they get thrown back
@@ -362,13 +376,14 @@ namespace TarodevController {
             rb.velocity = new Vector2(0, 0);
         }
 
-        //theoretically when the player hits the lava, they get respawned at the current spawn point
-        //but instead they get launched into the absolute fucking void
-        //I'm worried that this is because of how the player's velocity is calculated in the character controller
-        private void LavaEffect(Transform rPoint) 
+        //when the player hits the lava, they are frozen and moved back to the respawn point
+        //and after a couple seconds they regain movement and physics
+        private IEnumerator LavaRespawn(Transform rPoint) 
         {
-            //transform.position = rPoint.position;
-            Debug.Log("right now lava punts you into the infinite");
+            //Debug.Log(rPoint.position);
+            transform.position = Vector2.Lerp(transform.position, rPoint.position, 30f * Time.deltaTime);
+            yield return new WaitForSeconds(5f);
+            WalkOff = false;
         }
     }
 }

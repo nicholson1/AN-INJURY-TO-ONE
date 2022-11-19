@@ -36,6 +36,7 @@ public class Hazard : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) 
         {
             PlHazardHit?.Invoke(ThisHazard, RespawnPoints[CurrentRespawn].transform);
+            Debug.Log(RespawnPoints[CurrentRespawn].transform.position);
         }
 
         if (collision.gameObject.CompareTag("Friend"))

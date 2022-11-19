@@ -14,6 +14,7 @@ public class Friend : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    //remembering the default speed of the friend for hazard effects
     private float defSpeed;
     private void Start()
     {
@@ -111,10 +112,9 @@ public class Friend : MonoBehaviour
     }
 
 
-    //nightmare nightmare nightmare
-    //also difficult to test right now without the friends walking back to the player
-    //also having one launched friend hit the hazards causes unbelievably fucked up things to happen to the friends still following the player
-    //wondering if this whole concept needs to be reworked for the friends because of their varying collider statuses...
+    //big problem: how to make this affect just one friend at a time
+    //right now one friend hitting a hazard affects ALL the non-follower friends in a scene
+    //uwu how to fix this uwu
     private void HazardReact(Hazard.HazardType Haz, Transform respawn)
     {
         if (!isFollowing) 
@@ -124,7 +124,7 @@ public class Friend : MonoBehaviour
             {
                 case Hazard.HazardType.Lava:
                     Debug.Log("friend lava");
-                    LavaEffect(respawn);
+                    StartCoroutine(LavaRespawn(respawn));
                     break;
                 case Hazard.HazardType.Oil:
                     Debug.Log("friend oil");
@@ -138,19 +138,17 @@ public class Friend : MonoBehaviour
         }
     }
 
-    //neither oil nor electricity work the way I want them to on the friends
-    //maybe this is just a tuning issue?
+    //oil is very hard to test without any AI or movement on the friends
     private IEnumerator OilEffect()
     {
-        //_acceleration += accelBump;
         moveSpeed += 20f;
         Debug.Log("friend speed " + moveSpeed);
         yield return new WaitForSeconds(5f);
-        //_acceleration = defAccel;
         moveSpeed = defSpeed;
         Debug.Log("friend speed " + moveSpeed);
     }
 
+    //this works but it will send all free friends careening in one direction or the other
     private IEnumerator ElectroEffect()
     {
         rb.AddForce(new Vector2(-10, 0), ForceMode2D.Impulse);
@@ -158,9 +156,12 @@ public class Friend : MonoBehaviour
         rb.velocity = new Vector2(0,0);
     }
 
-    private void LavaEffect(Transform rPoint)
+    //this now sort of works
+    private IEnumerator LavaRespawn(Transform rPoint)
     {
-        //transform.position = rPoint.position;
-        Debug.Log("right now lava punts you into the infinite");
+        Debug.Log(rPoint.position);
+        transform.position = Vector2.Lerp(transform.position, rPoint.position, 30f * Time.deltaTime);
+        yield return new WaitForSeconds(5f);
     }
+
 }
