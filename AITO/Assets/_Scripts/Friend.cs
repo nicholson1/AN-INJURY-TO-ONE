@@ -112,51 +112,55 @@ public class Friend : MonoBehaviour
     }
 
 
-    //big problem: how to make this affect just one friend at a time
-    //right now one friend hitting a hazard affects ALL the non-follower friends in a scene
-    //uwu how to fix this uwu
-    private void HazardReact(Hazard.HazardType Haz, Transform respawn)
+    //friend hazard behaviors
+    private float speedBoost = 50f;
+    private void HazardReact(Hazard.HazardType Haz, Transform respawn, GameObject FriendObj)
     {
         if (!isFollowing) 
         {
-
-            switch (Haz)
+            if (FriendObj == this.gameObject) 
             {
-                case Hazard.HazardType.Lava:
-                    Debug.Log("friend lava");
-                    StartCoroutine(LavaRespawn(respawn));
-                    break;
-                case Hazard.HazardType.Oil:
-                    Debug.Log("friend oil");
-                    StartCoroutine(OilEffect());
-                    break;
-                case Hazard.HazardType.Electro:
-                    Debug.Log("friend zap");
-                    StartCoroutine(ElectroEffect());
-                    break;
+                switch (Haz)
+                {
+                    case Hazard.HazardType.Lava:
+                        Debug.Log("friend lava");
+                        StartCoroutine(LavaRespawn(respawn));
+                        break;
+                    case Hazard.HazardType.Oil:
+                        Debug.Log("friend oil");
+                        StartCoroutine(OilEffect());
+                        break;
+                    case Hazard.HazardType.Electro:
+                        Debug.Log("friend zap");
+                        StartCoroutine(ElectroEffect());
+                        break;
+                }
             }
+
         }
     }
 
     //oil is very hard to test without any AI or movement on the friends
     private IEnumerator OilEffect()
     {
-        moveSpeed += 20f;
+        moveSpeed =+ speedBoost;
         Debug.Log("friend speed " + moveSpeed);
         yield return new WaitForSeconds(5f);
         moveSpeed = defSpeed;
         Debug.Log("friend speed " + moveSpeed);
     }
 
-    //this works but it will send all free friends careening in one direction or the other
+    //this seems to work? But is hard to test without friend movement
     private IEnumerator ElectroEffect()
     {
-        rb.AddForce(new Vector2(-10, 0), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(-30, 0), ForceMode2D.Impulse);
+        Debug.Log("friend velocity " + rb.velocity);
         yield return new WaitForSeconds(2f);
         rb.velocity = new Vector2(0,0);
+        Debug.Log("friend velocity " + rb.velocity);
     }
 
-    //this now sort of works
+    //this works
     private IEnumerator LavaRespawn(Transform rPoint)
     {
         Debug.Log(rPoint.position);

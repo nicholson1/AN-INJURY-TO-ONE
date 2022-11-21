@@ -381,6 +381,8 @@ namespace TarodevController {
         private IEnumerator LavaRespawn(Transform rPoint) 
         {
             //Debug.Log(rPoint.position);
+            //transform.position = rPoint.position;
+            //Velocity = new Vector3(0,0,0);
             transform.position = Vector2.Lerp(transform.position, rPoint.position, 30f * Time.deltaTime);
             yield return new WaitForSeconds(5f);
             WalkOff = false;

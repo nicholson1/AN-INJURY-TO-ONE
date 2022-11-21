@@ -9,7 +9,7 @@ public class Hazard : MonoBehaviour
 
     public static event Action<HazardType, Transform> PlHazardHit;
 
-    public static event Action<HazardType, Transform> FrHazardHit;
+    public static event Action<HazardType, Transform, GameObject> FrHazardHit;
 
     public GameObject[] RespawnPoints;
 
@@ -41,7 +41,7 @@ public class Hazard : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Friend"))
         {
-            FrHazardHit?.Invoke(ThisHazard, RespawnPoints[CurrentRespawn].transform);
+            FrHazardHit?.Invoke(ThisHazard, RespawnPoints[CurrentRespawn].transform, collision.gameObject);
         }
     }
 
