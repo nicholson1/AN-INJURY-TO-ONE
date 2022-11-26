@@ -23,6 +23,7 @@ public class Button : MonoBehaviour
 
     private void PushButton()
     {
+        gameObject.GetComponentInChildren<PlatformMoveOnEvent>().enabled = true;
         image.sprite = ButtonDown;
         GetComponent<Interactable>().isInteractable = false;
     }

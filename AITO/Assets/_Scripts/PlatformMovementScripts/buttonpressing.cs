@@ -15,7 +15,7 @@ public class buttonpressing : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("something hit the button");
         if(other.gameObject.tag is "Player")
