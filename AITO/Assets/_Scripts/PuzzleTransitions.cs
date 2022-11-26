@@ -6,17 +6,28 @@ using UnityEngine;
 public class PuzzleTransitions : MonoBehaviour
 {
 
-    public static event Action Transition;
+    public static event Action<bool> TransitionRight;
 
     [SerializeField] private bool canTransition = false;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             if (canTransition)
             {
-                Transition();
-                this.gameObject.SetActive(false);
+                if (collision.transform.position.x > this.transform.position.x)
+                {
+                    TransitionRight(true);
+                    //transition left
+
+                }
+                else
+                {
+                    TransitionRight(false);
+                    //transition Right
+
+                }
+                //this.gameObject.SetActive(false);
             }
         }
     }

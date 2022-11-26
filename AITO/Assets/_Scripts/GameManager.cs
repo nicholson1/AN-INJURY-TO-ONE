@@ -15,19 +15,28 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        PuzzleTransitions.Transition += TriggerTransition;
+        PuzzleTransitions.TransitionRight += TriggerTransition;
 
     }
     private void OnDestroy()
     {
-        PuzzleTransitions.Transition -= TriggerTransition;
+        PuzzleTransitions.TransitionRight -= TriggerTransition;
 
     }
 
-    private void TriggerTransition()
+    private void TriggerTransition(bool isRight)
     {
-        cameraPosIndex += 1;
-        MoveCamera(CameraPositions[cameraPosIndex].position);
+        if (isRight)
+        {
+            cameraPosIndex += 1;
+            MoveCamera(CameraPositions[cameraPosIndex].position);
+        }
+        else
+        {
+            cameraPosIndex -= 1;
+            MoveCamera(CameraPositions[cameraPosIndex].position);
+        }
+        
     }
  
 

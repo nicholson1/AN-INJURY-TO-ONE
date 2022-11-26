@@ -26,6 +26,15 @@ public class PlayerFriendControl : MonoBehaviour
             {
                 //figure out which gameObject to follow
                 CollectFriend(f, GetFollowTarget());
+                if (friends.Count == 0)
+                {
+                    f.followDistance = 1.5f;
+                }
+                else
+                {
+                    f.followDistance = 1;
+                }
+
                 friends.Push(f);
             }
         }
@@ -104,7 +113,7 @@ public class PlayerFriendControl : MonoBehaviour
     private void ThrowMyFriend(float p)
     {
         var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint(friends.Peek().transform.position);
-        ThrowFriend(friends.Pop(), p/50, _mousePos - transform.position);
+        ThrowFriend(friends.Pop(), p/25, _mousePos - transform.position);
     }
 
     

@@ -26,7 +26,7 @@ public class Hazard : MonoBehaviour
     {
         RespawnPoints = GameObject.FindGameObjectsWithTag("Respawn");
 
-        PuzzleTransitions.Transition += UpdateRespawn;
+        PuzzleTransitions.TransitionRight += UpdateRespawn;
     }
 
     public HazardType ThisHazard;
@@ -45,8 +45,17 @@ public class Hazard : MonoBehaviour
         }
     }
 
-    private void UpdateRespawn() 
+    private void UpdateRespawn(bool isRight) 
     {
-        CurrentRespawn++;
+        if (isRight)
+        {
+            CurrentRespawn++;
+
+        }
+        else
+        {
+            CurrentRespawn--;
+
+        }
     }
 }

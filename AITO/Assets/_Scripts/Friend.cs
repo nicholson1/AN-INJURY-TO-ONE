@@ -8,11 +8,14 @@ public class Friend : MonoBehaviour
     public Transform FollowTarget;
     private bool isFollowing;
 
-    [SerializeField] private float followDistance;
+    public float followDistance;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float interactRange;
 
     private Animator animator;
     private Rigidbody2D rb;
+
+    [SerializeField] private LayerMask interactLayers;
 
     //remembering the default speed of the friend for hazard effects
     private float defSpeed;
@@ -44,10 +47,26 @@ public class Friend : MonoBehaviour
 
     private void Update()
     {
-        if (isFollowing)
+        if (CanFollow())
         {
             DoFollow();
+            
         }
+        else if (CanSeeInteract())
+        {
+            DoInteract();
+        }
+        
+    }
+
+    private bool CanSeeInteract()
+    {
+        return true;
+    }
+
+    private bool CanFollow()
+    {
+        return isFollowing;
     }
     
     private void DoFollow()
@@ -58,6 +77,45 @@ public class Friend : MonoBehaviour
                 moveSpeed * Time.deltaTime);
         }
        
+    }
+
+    private void DoInteract()
+    {
+        Collider2D[] _interactables =Physics2D.OverlapCircleAll(this.transform.position, interactRange, interactLayers);
+
+        Transform target = CheckInteractables(_interactables);
+        if (target != null)
+        {
+            transform.position =
+                Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * moveSpeed / 2);
+        }
+
+        // if checkinteractables isnt null
+        // move to position
+
+
+    }
+
+    private Transform CheckInteractables(Collider2D[] interactables)
+    {
+        //check if in sight
+        //check if being interacted with
+        foreach (var col in interactables)
+        {
+            
+            if (!col.GetComponent<Interactable>().isInteractable)
+            {
+                break;
+            }
+            else
+            {
+                //return first one that is
+                return col.transform;
+            }
+        }
+        
+        return null;
+
     }
 
     private void CollectedTrigger(Friend friend, Transform follow)
