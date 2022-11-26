@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Paralax : MonoBehaviour
 {
-    [SerializeField] private Transform camera;
+    [SerializeField] private Transform cam;
 
     [SerializeField] private float relativeMovement;
     void Update()
     {
-        transform.position = new Vector2(camera.position.x * relativeMovement, camera.position.y * relativeMovement);
+        transform.position = new Vector2(cam.position.x * relativeMovement, cam.position.y * relativeMovement);
     }
 }
