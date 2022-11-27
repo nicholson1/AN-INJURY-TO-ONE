@@ -45,7 +45,7 @@ public class PlayerSavePointController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "DeathArea")
+        if (collision.gameObject.tag == "DeathArea")
         {
             Debug.Log("Entered DeathArea, Back to save point");
             // if enter DeathArea, player dead and will be sent back to the prioior save point
