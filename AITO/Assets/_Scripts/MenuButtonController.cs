@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class MenuButtonController : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class MenuButtonController : MonoBehaviour
     public void PlayButton()
     {
         Debug.Log("Play Button Pressed");
-        EditorSceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
 
     public void ExitButton()
