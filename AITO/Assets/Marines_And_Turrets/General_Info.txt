@@ -1,0 +1,42 @@
+ ___        __       
+|_ _|_ __  / _| ___  
+ | || '_ \| |_ / _ \ 
+ | || | | |  _| (_) |
+|___|_| |_|_|  \___/ 
+
+
+#### -- General Info:
+
+-The turret duration time is default at 500.
+-Right mouse button to fire a Grenade_Target.
+-Turret selection with 1,2 or 3 button.
+-Grenade_Target is used for indicate the turret position.
+-Grenade_Target only can be called when the player is on Stop Mode.
+-Only 1 Grenade_Target at once.
+-When the turret appears the Grenade_Target is removed.
+
+#### -- Soldier Info:
+
+-Script associated: "Example_Motion_Controller.cs".
+-It contains the bullet speed var -> (public int Bullet_speed) default at 15.
+-It contains OnGUI elements. (Turrets texture buttons, progress_bar over turret and more...).
+-Press "k" for dead.
+-Left mouse button to fire.
+
+#### -- Grenade_Target Info:
+
+-Script associated: "Grenade_Target.cs".
+-It contains the turrets prefabs used for instantiate.
+-The turret is instantiated in top of screen and the Grenade_Target is removed.
+
+#### -- Turrets Info:
+
+-(1) Gun turret script associated: "Gun_Turret.cs".
+-(2) Blade turret script associated: "Blade_Turret.cs".
+-(3) Shield turret script associated: "Shield_Turret.cs".
+-It contains the duration of the turret -> (public int Duration) default at 500.
+
+#### -- Bullet Info:
+
+-Script associated: "Bullet.cs";
+-It is used to activate and patch the bullet explotion animation.
