@@ -11,10 +11,43 @@ public class PlayerFriendControl : MonoBehaviour
 
 
     private Stack<Friend> friends = new Stack<Friend>();
-    
+
+    private List<Friend> collectedFriends = new List<Friend>();
+
 
     [SerializeField] private GameObject pointer;
 
+    private void Start()
+    {
+        PuzzleTransitions.TransitionRight += GetFriends;
+
+    }
+    private void OnDestroy()
+    {
+        PuzzleTransitions.TransitionRight -= GetFriends;
+
+    }
+
+    private void GetFriends(bool i)
+    {
+        foreach (Friend f in collectedFriends)
+        {
+            if (f.FollowTarget == null)
+            {
+                CollectFriend(f, GetFollowTarget());
+                if (friends.Count == 0)
+                {
+                    f.followDistance = 1.5f;
+                }
+                else
+                {
+                    f.followDistance = 1;
+                }
+
+                friends.Push(f);
+            }
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Friend"))
@@ -36,6 +69,7 @@ public class PlayerFriendControl : MonoBehaviour
                 }
 
                 friends.Push(f);
+                collectedFriends.Add(f);
             }
         }
     }
@@ -112,8 +146,11 @@ public class PlayerFriendControl : MonoBehaviour
 
     private void ThrowMyFriend(float p)
     {
-        var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint(friends.Peek().transform.position);
-        ThrowFriend(friends.Pop(), p/25, _mousePos - transform.position);
+        var _mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint((friends.Peek().transform.position));
+        Friend f = friends.Pop();
+        
+
+        ThrowFriend(f, p/25, _mousePos);
     }
 
     

@@ -10,6 +10,13 @@ public class Button : MonoBehaviour
 
     [SerializeField] private SpriteRenderer image;
 
+    private PlatformMoveOnEvent platformMoveOnEvent;
+
+
+    private void Start()
+    {
+        platformMoveOnEvent = gameObject.GetComponentInChildren<PlatformMoveOnEvent>();
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -23,7 +30,12 @@ public class Button : MonoBehaviour
 
     private void PushButton()
     {
-        gameObject.GetComponentInChildren<PlatformMoveOnEvent>().enabled = true;
+
+        if (platformMoveOnEvent != null)
+        {
+            platformMoveOnEvent.enabled = true;
+        }
+        
         image.sprite = ButtonDown;
         GetComponent<Interactable>().isInteractable = false;
     }

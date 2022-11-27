@@ -9,6 +9,7 @@ public class Friend : MonoBehaviour
     private bool isFollowing;
 
     public float followDistance;
+    public bool HasBeenCollected = false;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float interactRange;
 
@@ -16,6 +17,8 @@ public class Friend : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField] private LayerMask interactLayers;
+    
+    
 
     //remembering the default speed of the friend for hazard effects
     private float defSpeed;
@@ -127,6 +130,7 @@ public class Friend : MonoBehaviour
 
             FollowTarget = follow;
             isFollowing = true;
+            HasBeenCollected = true;
         }
     }
 
@@ -141,7 +145,6 @@ public class Friend : MonoBehaviour
             isFollowing = false;
             FollowTarget = null;
 
-            
             rb.AddForce(dir * power, ForceMode2D.Impulse);
             StartCoroutine(ThrowAnimation());
 

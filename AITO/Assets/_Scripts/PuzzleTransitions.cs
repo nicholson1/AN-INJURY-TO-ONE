@@ -8,27 +8,39 @@ public class PuzzleTransitions : MonoBehaviour
 
     public static event Action<bool> TransitionRight;
 
-    [SerializeField] private bool canTransition = false;
+    [SerializeField] private bool canGoRight = true;
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (canTransition)
-            {
+           
+            
                 if (collision.transform.position.x > this.transform.position.x)
                 {
-                    TransitionRight(true);
+                    if (canGoRight)
+                    {
+                        TransitionRight(true);
+                        canGoRight = false;
+                    }
+
                     //transition left
 
                 }
+                
                 else
                 {
-                    TransitionRight(false);
+                    if (!canGoRight)
+                    {
+                        TransitionRight(false);
+                        canGoRight = true;
+
+                    }
+
                     //transition Right
 
                 }
                 //this.gameObject.SetActive(false);
-            }
+            
         }
     }
 }

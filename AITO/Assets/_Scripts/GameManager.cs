@@ -28,11 +28,14 @@ public class GameManager : MonoBehaviour
     {
         if (isRight)
         {
+            Debug.Log("Go Right");
             cameraPosIndex += 1;
             MoveCamera(CameraPositions[cameraPosIndex].position);
         }
         else
         {
+            Debug.Log("Go Left");
+
             cameraPosIndex -= 1;
             MoveCamera(CameraPositions[cameraPosIndex].position);
         }
