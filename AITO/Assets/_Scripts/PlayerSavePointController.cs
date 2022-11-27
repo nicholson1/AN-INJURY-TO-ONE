@@ -55,7 +55,6 @@ public class PlayerSavePointController : MonoBehaviour
 
     private void OverwritePlayerPosition()
     {
-        // CharacterController seems override transform.position
         // using disabled > set > enabled to avoid delay in changing position
         this.GetComponent<PlayerController>().enabled = false;
         this.transform.position = instance.ReturnSavedPlayerPosition();
