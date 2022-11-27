@@ -8,6 +8,7 @@ TagManager:
   - Friend
   - FxTemporaire
   - Button
+  - DeathArea
   layers:
   - Default
   - TransparentFX
