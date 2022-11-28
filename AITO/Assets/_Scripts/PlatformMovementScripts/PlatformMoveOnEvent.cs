@@ -11,7 +11,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
     private int curIndex = 0;
     private float minDist = 0.1f;
 
-    private float speed = 0.1f;
+    public float speed = 0.4f;
     float step;
 
     // Start is called before the first frame update
