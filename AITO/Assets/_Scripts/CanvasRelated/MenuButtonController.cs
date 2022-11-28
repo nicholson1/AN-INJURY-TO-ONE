@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtonController : MonoBehaviour
 {
+    public GameObject fadeOutImage;
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = fadeOutImage.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,7 @@ public class MenuButtonController : MonoBehaviour
     public void PlayButton()
     {
         Debug.Log("Play Button Pressed");
+        animator.SetTrigger("FadeOut");
         SceneManager.LoadScene(1);
     }
 
@@ -27,5 +31,10 @@ public class MenuButtonController : MonoBehaviour
     {
         Debug.Log("Exit Button Pressed");
         Application.Quit();
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(1);
     }
 }
