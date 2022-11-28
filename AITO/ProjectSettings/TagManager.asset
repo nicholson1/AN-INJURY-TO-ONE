@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - Button
   - DeathArea
+  - CameraTransitionTrigger
   layers:
   - Default
   - TransparentFX

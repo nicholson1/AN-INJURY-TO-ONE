@@ -6092,7 +6092,7 @@ GameObject:
   - component: {fileID: 589171987}
   m_Layer: 0
   m_Name: CTT3
-  m_TagString: Untagged
+  m_TagString: CameraTransitionTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9553,7 +9553,7 @@ GameObject:
   - component: {fileID: 808320392}
   m_Layer: 0
   m_Name: CTT4
-  m_TagString: Untagged
+  m_TagString: CameraTransitionTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9625,7 +9625,7 @@ GameObject:
   - component: {fileID: 884938954}
   m_Layer: 0
   m_Name: CTT1
-  m_TagString: Untagged
+  m_TagString: CameraTransitionTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10675,7 +10675,7 @@ GameObject:
   - component: {fileID: 1171725498}
   m_Layer: 0
   m_Name: CTT2
-  m_TagString: Untagged
+  m_TagString: CameraTransitionTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

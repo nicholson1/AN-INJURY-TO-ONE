@@ -45,6 +45,12 @@ public class PlayerSavePointController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "CameraTransitionTrigger")
+        {
+            Debug.Log("Player Information Saved");
+            instance.UpdateSavedPlayerPosition(this.transform.position);
+        }
+
         if (collision.gameObject.tag == "DeathArea")
         {
             Debug.Log("Entered DeathArea, Back to save point");
