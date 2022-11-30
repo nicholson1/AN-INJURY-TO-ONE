@@ -52,7 +52,8 @@ public class PlayerFriendControl : MonoBehaviour
     {
         if (collision.collider.CompareTag("Friend"))
         {
-            
+
+            this.GetComponent<Rigidbody2D>().velocity = Vector3.zero; 
             Friend f = collision.gameObject.GetComponent<Friend>();
 
             if (f.FollowTarget == null)

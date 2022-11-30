@@ -48,7 +48,7 @@ public class Friend : MonoBehaviour
         Hazard.FrHazardHit -= HazardReact;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (CanFollow())
         {
