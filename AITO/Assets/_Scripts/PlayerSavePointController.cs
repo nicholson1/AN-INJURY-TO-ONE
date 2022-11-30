@@ -39,7 +39,9 @@ public class PlayerSavePointController : MonoBehaviour
             }
             else
             {
-                RecoverWalking();
+                //RecoverWalking();
+
+                StartCoroutine(RecoverWalkingCoroutine());
 
                 this.isOverwriting = false;
                 Debug.Log("Overwriting Ends");
@@ -139,5 +141,12 @@ public class PlayerSavePointController : MonoBehaviour
         this.GetComponent<PlayerController>().SetAcceleration(this.savedAccel);
         this.GetComponent<PlayerController>().SetMoveClamp(this.savedMoveClamp);
         this.GetComponent<PlayerController>().enabled = true;
+    }
+
+    IEnumerator RecoverWalkingCoroutine()
+    {
+        // wait for 1 second, then run RecoverWalking() function
+        yield return new WaitForSeconds(1);
+        RecoverWalking();
     }
 }
