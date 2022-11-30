@@ -10,6 +10,7 @@ TagManager:
   - Button
   - DeathArea
   - CameraTransitionTrigger
+  - WalkableArea
   layers:
   - Default
   - TransparentFX

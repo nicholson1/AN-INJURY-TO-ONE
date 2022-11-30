@@ -22,6 +22,7 @@ public class PlayerSavePointController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // used during development, update the save data for player position when O key is pressed down
         if (Input.GetKeyDown(KeyCode.O))
         {
             // for testing disable PlayerController script from this script
@@ -32,6 +33,7 @@ public class PlayerSavePointController : MonoBehaviour
             instance.UpdateSavedPlayerPosition(this.transform.position);
         }
 
+        // used during development, load the save data for player position when P key is pressed down
         if (Input.GetKeyDown(KeyCode.P))
         {
             // for testing disable PlayerController script from this script
@@ -63,7 +65,13 @@ public class PlayerSavePointController : MonoBehaviour
     {
         // using disabled > set > enabled to avoid delay in changing position
         this.GetComponent<PlayerController>().enabled = false;
-        this.transform.position = instance.ReturnSavedPlayerPosition();
+        //this.transform.position = instance.ReturnSavedPlayerPosition();
+
+        // each time the player is reborn, it will appear at a higher y position and fall down
+        Vector3 newPosition = instance.ReturnSavedPlayerPosition();
+        newPosition.y = 14.0f;
+        this.transform.position = newPosition;
+
         this.GetComponent<PlayerController>().enabled = true;
     }
 }
