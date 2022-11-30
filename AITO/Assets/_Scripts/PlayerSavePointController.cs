@@ -107,12 +107,12 @@ public class PlayerSavePointController : MonoBehaviour
 
         // using disabled > set > enabled to avoid delay in changing position
         this.GetComponent<PlayerController>().enabled = false;
-        //this.transform.position = instance.ReturnSavedPlayerPosition();
+        this.transform.position = instance.ReturnSavedPlayerPosition();
 
         // each time the player is reborn, it will appear at a higher y position and fall down
-        Vector3 newPosition = instance.ReturnSavedPlayerPosition();
-        newPosition.y = 14.0f;
-        this.transform.position = newPosition;
+        //Vector3 newPosition = instance.ReturnSavedPlayerPosition();
+        //newPosition.y = 14.0f;
+        //this.transform.position = newPosition;
 
         this.GetComponent<PlayerController>().enabled = true;
 
