@@ -387,5 +387,27 @@ namespace TarodevController {
             yield return new WaitForSeconds(5f);
             WalkOff = false;
         }
+
+
+        // added by J.T., to return parameters about walking
+        public float ReturnAcceleration()
+        {
+            return this._acceleration;
+        }
+
+        public float ReturnMoveClamp()
+        {
+            return this._moveClamp;
+        }
+
+        public void SetAcceleration(float newAccel)
+        {
+            this._acceleration = newAccel;
+        }
+
+        public void SetMoveClamp(float newMoveClamp)
+        {
+            this._moveClamp = newMoveClamp;
+        }
     }
 }
