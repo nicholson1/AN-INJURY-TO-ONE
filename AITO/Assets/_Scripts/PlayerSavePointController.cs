@@ -26,6 +26,15 @@ public class PlayerSavePointController : MonoBehaviour
 
         this.savedAccel = this.GetComponent<PlayerController>().ReturnAcceleration();
         this.savedMoveClamp = this.GetComponent<PlayerController>().ReturnMoveClamp();
+
+        //HL: subscribing to hazard event which respawns the player when they fall into lava
+        Hazard.Respawn += OverwritePlayerPosition;
+    }
+
+    //HL: unsubscribing from the hazard event
+    private void OnDestroy()
+    {
+        Hazard.Respawn -= OverwritePlayerPosition;
     }
 
     // Update is called once per frame
