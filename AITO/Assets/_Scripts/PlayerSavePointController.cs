@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TarodevController;
 using UnityEngine;
+using System;
 
 public class PlayerSavePointController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerSavePointController : MonoBehaviour
     // write this line for updating the variables inside
     SingletonController instance;
 
+    //HL: event to provide respawn point to friends if they fall into lava
+    public static event Action<Vector3> FriendRespawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +31,16 @@ public class PlayerSavePointController : MonoBehaviour
         this.savedAccel = this.GetComponent<PlayerController>().ReturnAcceleration();
         this.savedMoveClamp = this.GetComponent<PlayerController>().ReturnMoveClamp();
 
-        //HL: subscribing to hazard event which respawns the player when they fall into lava
+        //HL: subscribing to hazard events which respawn the player and friends when they fall into lava
         Hazard.Respawn += OverwritePlayerPosition;
+        Hazard.FrRespawn += SendRespawnPosition;
     }
 
     //HL: unsubscribing from the hazard event
     private void OnDestroy()
     {
         Hazard.Respawn -= OverwritePlayerPosition;
+        Hazard.FrRespawn -= SendRespawnPosition;
     }
 
     // Update is called once per frame
@@ -157,5 +163,11 @@ public class PlayerSavePointController : MonoBehaviour
         // wait for 1 second, then run RecoverWalking() function
         yield return new WaitForSeconds(1);
         RecoverWalking();
+    }
+
+    //HL: function that provides respawn coordinates to the hazard script
+    private void SendRespawnPosition() 
+    {
+        FriendRespawn?.Invoke(instance.ReturnSavedPlayerPosition());
     }
 }

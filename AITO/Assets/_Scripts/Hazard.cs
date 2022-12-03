@@ -5,18 +5,27 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
+    //event to alert the player save point script to respawn the player at the respawn point
     public static event Action Respawn;
 
+    //event to alert the player save point script that we need the position at which to respawn a friend
+    public static event Action FrRespawn;
+
+    //the player
     public GameObject Player;
 
-    //Hazard effects
+    //rigidbody of the player
     private Rigidbody2D rb;
-    private Rigidbody2D frb;
+
+    //this is the friend getting respawned but obviously can't call it "Friend" because that's its own class
+    private GameObject Fwiend;
+
     //private float defAccel;
     //private float accelBump = 15f;
     //private float defDeccel;
     //private float decelBump = -15f;
 
+    //types of hazards
     public enum HazardType 
     {
         Lava,
@@ -26,6 +35,7 @@ public class Hazard : MonoBehaviour
 
     private void Start()
     {
+        //finding the player
         Player = GameObject.FindGameObjectWithTag("Player");
         //getting the rigidbody so we can add force
         rb = Player.GetComponent<Rigidbody2D>();
@@ -33,26 +43,37 @@ public class Hazard : MonoBehaviour
         //saving the player's default acceleration so we can get back to it after the oil slick
         //defAccel = _acceleration;
         //defDeccel = _deAcceleration;
+
+        PlayerSavePointController.FriendRespawn += FriendLava;
     }
 
-    private void OnDestroy()
-    {
-        //unsub from hazards
-        //Hazard.PlHazardHit -= HazardReact;
-    }
-
+    //variable to hold what type of hazard the current hazard is
     public HazardType ThisHazard;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")) 
         {
-            HazardReact(ThisHazard);
+            //when the player hits the lava they respawn
+            if (ThisHazard == HazardType.Lava) 
+            {
+                Debug.Log("player lava");
+                //calls to JT's player save system to respawn the player when they fall into the lava
+                Respawn?.Invoke();
+            }
         }
 
         if (collision.gameObject.CompareTag("Friend"))
         {
-            frb = collision.gameObject.GetComponent<Rigidbody2D>();
-            FriendHazardReact(ThisHazard);
+            //when the friend hits the lava they can respawn
+            //I am hoping to think of a more efficient way to do this
+            if (ThisHazard == HazardType.Lava)
+            {
+                Debug.Log("friend lava");
+                //save the fwiend because we need to change its position in a second
+                Fwiend = collision.gameObject;
+                //place a call to the save point controller to get our respawn spot
+                FrRespawn?.Invoke();
+            }
         }
     }
 
@@ -62,37 +83,29 @@ public class Hazard : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                //rb.velocity *= -2f;
-                rb.AddForce(rb.transform.right * -2f, ForceMode2D.Impulse);
+                //Vector2 impulse = rb.velocity * -20;
+                Vector2 impulse = new (-5, 2);
+                rb.AddForce(impulse, ForceMode2D.Impulse);
             }
 
+            //I'm not convinced this is actually working...
+            //need to figure out a better way to test it
             if (collision.gameObject.CompareTag("Friend"))
             {
-                //frb.velocity *= -2f;
-                frb.AddForce(frb.transform.right * -2f, ForceMode2D.Impulse);
+                Rigidbody2D frb = collision.gameObject.GetComponent<Rigidbody2D>();
+                //Vector2 impulse = frb.velocity * -20;
+                Vector2 impulse = new (-5, 2);
+                frb.AddForce(impulse, ForceMode2D.Impulse);
             }
         }
     }
 
-    private void HazardReact(HazardType Haz)
+    //function to respawn the player at the saved respawn point
+    //and make its velocity zero so it doesn't go flying off lol
+    private void FriendLava(Vector3 Respawn) 
     {
-        switch (Haz)
-        {
-            case HazardType.Lava:
-                Debug.Log("player lava");
-                //calls to JT's player save system to respawn the player when they fall into the lava
-                Respawn?.Invoke();
-                break;
-            case HazardType.Oil:
-                Debug.Log("player oil");
-                //StartCoroutine(OilEffect());
-                break;
-            case HazardType.Electro:
-                Debug.Log("player zap");
-                //StartCoroutine(ElectroEffect());
-                //ElectroEffect();
-                break;
-        }
+        Fwiend.transform.position = Respawn;
+        Fwiend.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 
     //oil currently turned off
@@ -105,38 +118,6 @@ public class Hazard : MonoBehaviour
         //_deAcceleration = defDeccel;
     }*/
 
-    /*private void ElectroEffect() 
-    {
-        //multiplying the velocity by -2 hasn't been working??
-        //will continue experimenting
-        rb.AddForce(rb.transform.right * -2f, ForceMode2D.Impulse);
-        Debug.Log("this happened " + rb.velocity);
-    }*/
-
-    private void FriendHazardReact(HazardType Haz)
-    {
-        switch (Haz)
-        {
-            case HazardType.Lava:
-                Debug.Log("friend lava");
-                FriendLava();
-                break;
-            case HazardType.Oil:
-                Debug.Log("friend oil");
-                break;
-            case HazardType.Electro:
-                Debug.Log("friend zap");
-                //FriendZap(FriendObj);
-                break;
-        }
-    }
-
-    //I really don't want to mess with the singleton and save point controllers because I don't quite understand how they work
-    private void FriendLava() 
-    {
-        Debug.Log("Unclear how to integrate this with Jiachen's player respawn");
-    }
-
     //oil is turned off for now
     /*private IEnumerator FriendOilEffect()
     {
@@ -145,13 +126,6 @@ public class Hazard : MonoBehaviour
         yield return new WaitForSeconds(5f);
         //moveSpeed = defSpeed;
         //Debug.Log("friend speed " + moveSpeed);
-    }*/
-
-    /*private void FriendZap(GameObject Friend) 
-    {
-        frb = Friend.GetComponent<Rigidbody2D>();
-        frb.AddForce(frb.transform.right * -2f, ForceMode2D.Impulse);
-        Debug.Log("this happened " + frb.velocity);
     }*/
 
 }
