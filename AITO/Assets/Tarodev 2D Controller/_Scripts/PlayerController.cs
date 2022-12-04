@@ -88,6 +88,7 @@ namespace TarodevController {
             else if (!_colDown && groundedCheck) {
                 _coyoteUsable = true; // Only trigger when first touching
                 LandingThisFrame = true;
+                //GetComponent<Rigidbody2D>().gravityScale = 0;
             }
 
             _colDown = groundedCheck;
@@ -330,6 +331,16 @@ namespace TarodevController {
         public void SetJumpHeight(float newJumpHeight)
         {
             this._jumpHeight = newJumpHeight;
+        }
+        
+        public void SetVelocity(Vector3 newVelocity)
+        {
+            this.Velocity = newVelocity;
+        }
+        public void SetMoveSpeed(float hor, float vert)
+        {
+            _currentHorizontalSpeed = hor;
+            _currentVerticalSpeed = vert;
         }
     }
 }

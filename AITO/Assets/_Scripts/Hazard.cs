@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TarodevController;
 using UnityEngine;
 
 public class Hazard : MonoBehaviour
@@ -10,6 +11,9 @@ public class Hazard : MonoBehaviour
 
     //event to alert the player save point script that we need the position at which to respawn a friend
     public static event Action FrRespawn;
+    
+    public static event Action<Boolean> StunThePlayer;
+
 
     //the player
     public GameObject Player;
@@ -25,6 +29,9 @@ public class Hazard : MonoBehaviour
     //private float defDeccel;
     //private float decelBump = -15f;
 
+    private float electricTimer = 0;
+    private PlayerController pc;
+
     //types of hazards
     public enum HazardType 
     {
@@ -39,6 +46,8 @@ public class Hazard : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         //getting the rigidbody so we can add force
         rb = Player.GetComponent<Rigidbody2D>();
+        
+         pc = Player.GetComponent<PlayerController>();
 
         //saving the player's default acceleration so we can get back to it after the oil slick
         //defAccel = _acceleration;
@@ -60,6 +69,19 @@ public class Hazard : MonoBehaviour
                 //calls to JT's player save system to respawn the player when they fall into the lava
                 Respawn?.Invoke();
             }
+
+            if (ThisHazard == HazardType.Electro)
+            {
+                if (electricTimer <= 0)
+                {
+                    
+                    rb.AddForce(pc.Velocity * -1.5f , ForceMode2D.Impulse);
+                    //pc.SetVelocity(pc.Velocity * -.5f);
+                    electricTimer = .5f;
+                   StunPlayer();
+                }
+                
+            }
         }
 
         if (collision.gameObject.CompareTag("Friend"))
@@ -79,25 +101,25 @@ public class Hazard : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (ThisHazard == HazardType.Electro) 
-        {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                //Vector2 impulse = rb.velocity * -20;
-                Vector2 impulse = new (-5, 2);
-                rb.AddForce(impulse, ForceMode2D.Impulse);
-            }
-
-            //I'm not convinced this is actually working...
-            //need to figure out a better way to test it
-            if (collision.gameObject.CompareTag("Friend"))
-            {
-                Rigidbody2D frb = collision.gameObject.GetComponent<Rigidbody2D>();
-                //Vector2 impulse = frb.velocity * -20;
-                Vector2 impulse = new (-5, 2);
-                frb.AddForce(impulse, ForceMode2D.Impulse);
-            }
-        }
+        // if (ThisHazard == HazardType.Electro) 
+        // {
+        //     if (collision.gameObject.CompareTag("Player"))
+        //     {
+        //         //Vector2 impulse = rb.velocity * -20;
+        //         Vector2 impulse = new (-5, 2);
+        //         rb.AddForce(impulse, ForceMode2D.Impulse);
+        //     }
+        //
+        //     //I'm not convinced this is actually working...
+        //     //need to figure out a better way to test it
+        //     if (collision.gameObject.CompareTag("Friend"))
+        //     {
+        //         Rigidbody2D frb = collision.gameObject.GetComponent<Rigidbody2D>();
+        //         //Vector2 impulse = frb.velocity * -20;
+        //         Vector2 impulse = new (-5, 2);
+        //         frb.AddForce(impulse, ForceMode2D.Impulse);
+        //     }
+        // }
     }
 
     //function to respawn the player at the saved respawn point
@@ -106,6 +128,59 @@ public class Hazard : MonoBehaviour
     {
         Fwiend.transform.position = Respawn;
         Fwiend.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    }
+
+    private bool adjustGrav = false;
+    private void LateUpdate()
+    {
+        if (electricTimer > 0)
+        {
+            electricTimer -= Time.deltaTime;
+        }
+
+        if (adjustGrav)
+        {
+            if (rb.gravityScale > 0)
+            {
+                rb.gravityScale -= Time.deltaTime * 10;
+
+            }
+            else
+            {
+                rb.gravityScale = 0;
+                adjustGrav = false;
+                rb.velocity = Vector3.zero;
+                pc.enabled = true;
+                
+
+                StunThePlayer(false);
+
+                //endStun Animation
+
+            } 
+        }
+        
+
+        
+    }
+
+    private void StunPlayer()
+    {
+        pc.SetMoveSpeed(0,0);
+        //pc.SetVelocity(Vector3.zero);
+        pc.enabled = false;
+        rb.gravityScale = 10;
+        adjustGrav = true;
+
+        StunThePlayer(true);
+        //activate stunned animation
+
+
+
+
+
+        //pc.SetVelocity(Vector3.zero);
+        //Debug.Log("enabled");
     }
 
     //oil currently turned off
