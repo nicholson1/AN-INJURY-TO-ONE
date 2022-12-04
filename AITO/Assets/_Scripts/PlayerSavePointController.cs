@@ -4,15 +4,17 @@ using TarodevController;
 using UnityEngine;
 using System;
 
-public class PlayerSavePointController : MonoBehaviour
+public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStarts, ObserverOfCameraMoveEnds
 {
     // get the sprite for character to ask it run Flash() function
     public GameObject playerSprite;
     
     // save the _acceleration and _moveClamp value in PlayerController.sc > #region Walk,
-    // modify them to 0 can make player cannot move
+    // and _jumpHeight in #region Jump
+    // modify them to 0 can make player cannot move nor jump
     private float savedAccel;
     private float savedMoveClamp;
+    private float savedJumpHeight;
     // these three boolean values are used to check the player's status,
     // players cannot move after falling into DeathArea until they are on the ground and wait for a specific time period
     private bool isOnGround = false;
@@ -39,10 +41,22 @@ public class PlayerSavePointController : MonoBehaviour
 
         this.savedAccel = this.GetComponent<PlayerController>().ReturnAcceleration();
         this.savedMoveClamp = this.GetComponent<PlayerController>().ReturnMoveClamp();
+        this.savedJumpHeight = this.GetComponent<PlayerController>().ReturnJumpHeight();
 
         //HL: subscribing to hazard events which respawn the player and friends when they fall into lava
         Hazard.Respawn += OverwritePlayerPosition;
         Hazard.FrRespawn += SendRespawnPosition;
+
+        // JT: as an observer of camera moves
+        foreach (GameManager gm in FindObjectsOfType<GameManager>())
+        {
+            gm.AddObverserOfCameraMoveStarts(this);
+        }
+
+        foreach (CameraMove cm in FindObjectsOfType<CameraMove>())
+        {
+            cm.AddObverserOfCameraMoveEnds(this);
+        }
     }
 
     //HL: unsubscribing from the hazard event
@@ -55,6 +69,8 @@ public class PlayerSavePointController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // respawn will overwrite play's position,
+        // this process will freeze the player's movement until play is on walkable areas and wait for specific period of time
         if (isOverwriting)
         {
             if (!this.isOnGround)
@@ -156,6 +172,7 @@ public class PlayerSavePointController : MonoBehaviour
         }
         this.GetComponent<PlayerController>().SetAcceleration(0f);
         this.GetComponent<PlayerController>().SetMoveClamp(0f);
+        this.GetComponent<PlayerController>().SetJumpHeight(0f);
         this.GetComponent<PlayerController>().enabled = true;
         this.isFreezing = false;
     }
@@ -166,6 +183,7 @@ public class PlayerSavePointController : MonoBehaviour
         Debug.Log("on ground Disable");
         this.GetComponent<PlayerController>().SetAcceleration(this.savedAccel);
         this.GetComponent<PlayerController>().SetMoveClamp(this.savedMoveClamp);
+        this.GetComponent<PlayerController>().SetJumpHeight(this.savedJumpHeight);
         this.GetComponent<PlayerController>().enabled = true;
     }
 
@@ -180,5 +198,16 @@ public class PlayerSavePointController : MonoBehaviour
     private void SendRespawnPosition() 
     {
         FriendRespawn?.Invoke(instance.ReturnSavedPlayerPosition());
+    }
+
+    // JT: as an observer of camera moves
+    public void OnNotifyCameraMoveStarts()
+    {
+        FreezeWalking();
+    }
+
+    public void OnNotifyCameraMoveEnds()
+    {
+        RecoverWalking();
     }
 }

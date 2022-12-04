@@ -13,7 +13,7 @@ public class PuzzleTransitions : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-           
+            
             
                 if (collision.transform.position.x > this.transform.position.x)
                 {

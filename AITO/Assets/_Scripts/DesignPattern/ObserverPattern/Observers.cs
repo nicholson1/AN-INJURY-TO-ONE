@@ -6,3 +6,13 @@ public interface ObserverOfSceneEndTrigger
 {
     void OnNotify(int sceneIndex, bool sceneEnds);
 }
+
+public interface ObserverOfCameraMoveStarts
+{
+    void OnNotifyCameraMoveStarts();
+}
+
+public interface ObserverOfCameraMoveEnds
+{
+    void OnNotifyCameraMoveEnds();
+}

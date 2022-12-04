@@ -301,7 +301,7 @@ namespace TarodevController {
 
         #endregion
 
-        // added by J.T., to return parameters about walking
+        // JT: to return parameters about walking and jumping
         public float ReturnAcceleration()
         {
             return this._acceleration;
@@ -312,6 +312,11 @@ namespace TarodevController {
             return this._moveClamp;
         }
 
+        public float ReturnJumpHeight()
+        {
+            return this._jumpHeight;
+        }
+
         public void SetAcceleration(float newAccel)
         {
             this._acceleration = newAccel;
@@ -320,6 +325,11 @@ namespace TarodevController {
         public void SetMoveClamp(float newMoveClamp)
         {
             this._moveClamp = newMoveClamp;
+        }
+
+        public void SetJumpHeight(float newJumpHeight)
+        {
+            this._jumpHeight = newJumpHeight;
         }
     }
 }
