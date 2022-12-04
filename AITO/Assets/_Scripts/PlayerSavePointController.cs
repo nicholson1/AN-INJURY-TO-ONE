@@ -6,11 +6,20 @@ using System;
 
 public class PlayerSavePointController : MonoBehaviour
 {
+    // get the sprite for character to ask it run Flash() function
+    public GameObject playerSprite;
+    
+    // save the _acceleration and _moveClamp value in PlayerController.sc > #region Walk,
+    // modify them to 0 can make player cannot move
     private float savedAccel;
     private float savedMoveClamp;
+    // these three boolean values are used to check the player's status,
+    // players cannot move after falling into DeathArea until they are on the ground and wait for a specific time period
     private bool isOnGround = false;
     private bool isOverwriting = false;
     private bool isFreezing = false;
+    // duration of freezing movement time after player respawn
+    private float freezingDuration = 1f;
 
     // singleton pattern only have one static instance, initiated at the beginning in SaveLoadController.cs,
     // write this line for updating the variables inside
@@ -54,6 +63,8 @@ public class PlayerSavePointController : MonoBehaviour
             }
             else
             {
+                playerSprite.GetComponent<FlashEffect>().Flash(freezingDuration);
+
                 //RecoverWalking();
 
                 StartCoroutine(RecoverWalkingCoroutine());
@@ -161,7 +172,7 @@ public class PlayerSavePointController : MonoBehaviour
     IEnumerator RecoverWalkingCoroutine()
     {
         // wait for 1 second, then run RecoverWalking() function
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(freezingDuration);
         RecoverWalking();
     }
 

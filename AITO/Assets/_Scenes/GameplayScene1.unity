@@ -413,6 +413,10 @@ PrefabInstance:
       value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 5571253414617459534, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571253414617459534, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -10937,6 +10941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc2575f840caaf40b4b5dff84be0790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 1839095365}
 --- !u!82 &1329222815
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47733,6 +47738,24 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1839095365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5571253413257763223, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
+  m_PrefabInstance: {fileID: 223040249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1839095369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839095365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b2eb1397e351d4a87b32b1db16ce93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: a291c615efbc85141ab2fa8c247041c4, type: 2}
 --- !u!1 &1936721257
 GameObject:
   m_ObjectHideFlags: 0
