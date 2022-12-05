@@ -14,25 +14,25 @@ public class GameManager : MonoBehaviour
     private int cameraPosIndex = 0;
 
     // JT: as a subject be observered
-    private List<ObserverOfCameraMoveStarts> _observerOfCameraMoveStarts = new List<ObserverOfCameraMoveStarts>();
+    //private List<ObserverOfCameraMoveStarts> _observerOfCameraMoveStarts = new List<ObserverOfCameraMoveStarts>();
 
-    public void AddObverserOfCameraMoveStarts(ObserverOfCameraMoveStarts observer)
-    {
-        _observerOfCameraMoveStarts.Add(observer);
-    }
+    //public void AddObverserOfCameraMoveStarts(ObserverOfCameraMoveStarts observer)
+    //{
+    //    _observerOfCameraMoveStarts.Add(observer);
+    //}
 
-    public void RemoveObverserOfCameraMoveStarts(ObserverOfCameraMoveStarts observer)
-    {
-        _observerOfCameraMoveStarts.Remove(observer);
-    }
+    //public void RemoveObverserOfCameraMoveStarts(ObserverOfCameraMoveStarts observer)
+    //{
+    //    _observerOfCameraMoveStarts.Remove(observer);
+    //}
 
-    public void Notify()
-    {
-        foreach (ObserverOfCameraMoveStarts observer in _observerOfCameraMoveStarts)
-        {
-            observer.OnNotifyCameraMoveStarts();
-        }
-    }
+    //public void Notify()
+    //{
+    //    foreach (ObserverOfCameraMoveStarts observer in _observerOfCameraMoveStarts)
+    //    {
+    //        observer.OnNotifyCameraMoveStarts();
+    //    }
+    //}
 
     private void Start()
     {
@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
     private void TriggerTransition(bool isRight)
     {
         // JT: as a subject be observered
-        Notify();
-        Debug.Log("camera move starts");
+        //Notify();
+        //Debug.Log("camera move starts");
 
         if (isRight)
         {

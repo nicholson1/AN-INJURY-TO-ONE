@@ -4,7 +4,7 @@ using TarodevController;
 using UnityEngine;
 using System;
 
-public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStarts, ObserverOfCameraMoveEnds
+public class PlayerSavePointController : MonoBehaviour
 {
     // get the sprite for character to ask it run Flash() function
     public GameObject playerSprite;
@@ -46,17 +46,19 @@ public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStar
         //HL: subscribing to hazard events which respawn the player and friends when they fall into lava
         Hazard.Respawn += OverwritePlayerPosition;
         Hazard.FrRespawn += SendRespawnPosition;
+        CameraMove.CameraDoneMoving += OnNotifyCameraMoveEnds;
+        GameManager.MoveCamera += OnNotifyCameraMoveStarts;
 
         // JT: as an observer of camera moves
-        foreach (GameManager gm in FindObjectsOfType<GameManager>())
-        {
-            gm.AddObverserOfCameraMoveStarts(this);
-        }
+        //foreach (GameManager gm in FindObjectsOfType<GameManager>())
+        //{
+        //    gm.AddObverserOfCameraMoveStarts(this);
+        //}
 
-        foreach (CameraMove cm in FindObjectsOfType<CameraMove>())
-        {
-            cm.AddObverserOfCameraMoveEnds(this);
-        }
+        //foreach (CameraMove cm in FindObjectsOfType<CameraMove>())
+        //{
+        //    cm.AddObverserOfCameraMoveEnds(this);
+        //}
     }
 
     //HL: unsubscribing from the hazard event
@@ -64,6 +66,8 @@ public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStar
     {
         Hazard.Respawn -= OverwritePlayerPosition;
         Hazard.FrRespawn -= SendRespawnPosition;
+        CameraMove.CameraDoneMoving -= OnNotifyCameraMoveEnds;
+        GameManager.MoveCamera -= OnNotifyCameraMoveStarts;
     }
 
     // Update is called once per frame
@@ -79,6 +83,7 @@ public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStar
             }
             else
             {
+                Debug.Log("begin recover movement");
                 playerSprite.GetComponent<FlashEffect>().Flash(freezingDuration);
 
                 //RecoverWalking();
@@ -175,6 +180,7 @@ public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStar
         this.GetComponent<PlayerController>().SetJumpHeight(0f);
         this.GetComponent<PlayerController>().enabled = true;
         this.isFreezing = false;
+        Debug.Log("is freezing");
     }
 
     private void RecoverWalking()
@@ -201,13 +207,14 @@ public class PlayerSavePointController : MonoBehaviour, ObserverOfCameraMoveStar
     }
 
     // JT: as an observer of camera moves
-    public void OnNotifyCameraMoveStarts()
+    public void OnNotifyCameraMoveStarts(Vector3 cameraPos)
     {
         FreezeWalking();
     }
 
     public void OnNotifyCameraMoveEnds()
     {
+        Debug.Log("camera done moving");
         RecoverWalking();
     }
 }

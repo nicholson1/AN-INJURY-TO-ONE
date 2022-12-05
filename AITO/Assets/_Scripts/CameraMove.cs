@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,26 +9,28 @@ public class CameraMove : MonoBehaviour
     private bool isMoving = false;
     [SerializeField] private float MoveSpeed;
 
+    public static event Action CameraDoneMoving;
+
     // JT: as a subject be observered
-    private List<ObserverOfCameraMoveEnds> _observerOfCameraMoveEnds = new List<ObserverOfCameraMoveEnds>();
+    //private List<ObserverOfCameraMoveEnds> _observerOfCameraMoveEnds = new List<ObserverOfCameraMoveEnds>();
 
-    public void AddObverserOfCameraMoveEnds(ObserverOfCameraMoveEnds observer)
-    {
-        _observerOfCameraMoveEnds.Add(observer);
-    }
+    //public void AddObverserOfCameraMoveEnds(ObserverOfCameraMoveEnds observer)
+    //{
+    //    _observerOfCameraMoveEnds.Add(observer);
+    //}
 
-    public void RemoveObverserOfCameraMoveEnds(ObserverOfCameraMoveEnds observer)
-    {
-        _observerOfCameraMoveEnds.Remove(observer);
-    }
+    //public void RemoveObverserOfCameraMoveEnds(ObserverOfCameraMoveEnds observer)
+    //{
+    //    _observerOfCameraMoveEnds.Remove(observer);
+    //}
 
-    public void Notify()
-    {
-        foreach (ObserverOfCameraMoveEnds observer in _observerOfCameraMoveEnds)
-        {
-            observer.OnNotifyCameraMoveEnds();
-        }
-    }
+    //public void Notify()
+    //{
+    //    foreach (ObserverOfCameraMoveEnds observer in _observerOfCameraMoveEnds)
+    //    {
+    //        observer.OnNotifyCameraMoveEnds();
+    //    }
+    //}
 
     private void Start()
     {
@@ -57,9 +60,10 @@ public class CameraMove : MonoBehaviour
             {
                 isMoving = false;
 
+                CameraDoneMoving();
                 // JT: as a subject be observered
-                Notify();
-                Debug.Log("camera move ends");
+                //Notify();
+                //Debug.Log("camera move ends");
             }
         }
     }
