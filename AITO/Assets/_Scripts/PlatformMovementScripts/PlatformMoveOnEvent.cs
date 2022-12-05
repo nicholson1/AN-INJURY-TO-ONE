@@ -13,6 +13,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
 
     public float speed = 0.4f;
     float step;
+    public Vector3 startPos;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
         step = speed * Time.deltaTime;
         c = Waypoints[0];
         finalIndex = Waypoints.Length - 1;
+        startPos = new Vector3(transform.position.x, transform.position.y);
     }
 
     // Update is called once per frame

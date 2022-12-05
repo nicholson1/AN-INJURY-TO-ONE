@@ -5,6 +5,7 @@ using UnityEngine;
 public class buttonpressing : MonoBehaviour
 {
     //when the button is pressed, we want to activate the movement script in the child platform
+    public GameObject platform;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +30,21 @@ public class buttonpressing : MonoBehaviour
         {
             gameObject.GetComponentInChildren<PlatformMoveOnEvent>().enabled = true;
             //activate the platform movement script in the sibling platform object
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("something left the button");
+        if(collision.gameObject.tag is "Player")
+        {
+            Debug.Log("player left the button");
+            gameObject.GetComponentInChildren<PlatformMoveOnEvent>().enabled = false;
+        }
+        if (collision.gameObject.tag is "Friend")
+        {
+            Debug.Log("friend left the button");
+            gameObject.GetComponentInChildren<PlatformMoveOnEvent>().enabled = false;
         }
     }
 }

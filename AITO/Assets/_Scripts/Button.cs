@@ -11,6 +11,7 @@ public class Button : MonoBehaviour
     [SerializeField] private SpriteRenderer image;
 
     private PlatformMoveOnEvent platformMoveOnEvent;
+    public bool StopsOnButtonUp;
 
 
     private void Start()
@@ -45,6 +46,9 @@ public class Button : MonoBehaviour
         image.sprite = ButtonUp;
         GetComponent<Interactable>().isInteractable = true;
 
-
+        if(platformMoveOnEvent != null && StopsOnButtonUp)
+        {
+            platformMoveOnEvent.enabled = false;
+        }
     }
 }

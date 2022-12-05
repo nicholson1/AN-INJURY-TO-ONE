@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7317013309217143222, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
+      propertyPath: StopsOnButtonUp
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143223, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -414,6 +418,7 @@ MonoBehaviour:
   Waypoints:
   - {fileID: 2000613940}
   speed: 0.4
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &524006152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,6 +496,7 @@ MonoBehaviour:
   Waypoints:
   - {fileID: 327114515}
   speed: 0.4
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &674776746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,6 +1024,7 @@ MonoBehaviour:
   Waypoints:
   - {fileID: 1121541138}
   speed: 0.4
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1076918937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7862,6 +7869,7 @@ MonoBehaviour:
   Waypoints:
   - {fileID: 33276600}
   speed: 0.4
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1359875233
 GameObject:
   m_ObjectHideFlags: 0
@@ -10669,6 +10677,10 @@ PrefabInstance:
     - target: {fileID: 7317013309217143220, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317013309217143222, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
+      propertyPath: StopsOnButtonUp
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143223, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_RootOrder
@@ -13649,6 +13661,7 @@ MonoBehaviour:
   Waypoints:
   - {fileID: 1805437237}
   speed: 0.4
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1982034299
 GameObject:
   m_ObjectHideFlags: 0
@@ -24371,6 +24384,7 @@ MonoBehaviour:
   ButtonUp: {fileID: -610759983, guid: 6766a80d2ab4752438edf3c222102ddd, type: 3}
   ButtonDown: {fileID: -149700318, guid: ab7186adffcefe8479e32df7805d5ff7, type: 3}
   image: {fileID: 1928052351}
+  StopsOnButtonUp: 0
 --- !u!4 &2026960139
 Transform:
   m_ObjectHideFlags: 0
