@@ -13,6 +13,7 @@ public class Hazard : MonoBehaviour
     public static event Action FrRespawn;
     
     public static event Action<Boolean> StunThePlayer;
+    public static event Action<Boolean> StunTheFriend;
 
 
     //the player
@@ -78,7 +79,8 @@ public class Hazard : MonoBehaviour
                     rb.AddForce(pc.Velocity * -1.5f , ForceMode2D.Impulse);
                     //pc.SetVelocity(pc.Velocity * -.5f);
                     electricTimer = .5f;
-                   StunPlayer();
+                    StunPlayer();
+
                 }
                 
             }
@@ -86,15 +88,31 @@ public class Hazard : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Friend"))
         {
+            Fwiend = collision.gameObject;
             //when the friend hits the lava they can respawn
             //I am hoping to think of a more efficient way to do this
             if (ThisHazard == HazardType.Lava)
             {
                 Debug.Log("friend lava");
                 //save the fwiend because we need to change its position in a second
-                Fwiend = collision.gameObject;
+                
                 //place a call to the save point controller to get our respawn spot
                 FrRespawn?.Invoke();
+            }
+            
+            if (ThisHazard == HazardType.Electro)
+            {
+                if (electricTimer <= 0)
+                {
+                    Rigidbody2D frb = Fwiend.GetComponent<Rigidbody2D>();
+                    
+                    frb.AddForce(frb.velocity * -2f , ForceMode2D.Impulse);
+                    //pc.SetVelocity(pc.Velocity * -.5f);
+                    //electricTimer = .5f;
+                    StunTheFriend(true);
+
+                }
+                
             }
         }
     }
