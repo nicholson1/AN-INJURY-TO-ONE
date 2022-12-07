@@ -47,7 +47,6 @@ public class LevelChangeController : MonoBehaviour, ObserverOfSceneEndTrigger
     {
         // for playtest, will return to menu scene
         // need to replaced to "+ 1" after having following scenes
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
