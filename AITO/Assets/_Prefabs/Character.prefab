@@ -19853,7 +19853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4650dc3e6badd88498d4f0028ed3eec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartEyeSprite: {fileID: 21300000, guid: 5aa76c32264f4c14790c04c867a5e86d, type: 3}
+  heartEyeSprite: {fileID: 21300000, guid: 36bead09625c97249bcdca2dd3b8f9de, type: 3}
 --- !u!1 &5571253414617459534
 GameObject:
   m_ObjectHideFlags: 0
