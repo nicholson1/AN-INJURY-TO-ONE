@@ -45,17 +45,19 @@ public class LevelChangeController : MonoBehaviour, ObserverOfSceneEndTrigger
 
     public void OnFadeComplete()
     {
-        // for playtest, will return to menu scene
-        // need to replaced to "+ 1" after having following scenes
+        // - 1: to the previous scene
+        // + 1: to the next scene
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void OnFadeComplete(int sceneIndex)
     {
-        // for playtest, will return to menu scene
-        // need to replaced to "+ 1" after having following scenes
+        // - 1: to the previous scene
+        // + 1: to the next scene
 
-        SceneManager.LoadScene(sceneIndex - 1);
+        //SceneManager.LoadScene(sceneIndex - 1);
+        SceneManager.LoadScene(sceneIndex + 1);
     }
 }
