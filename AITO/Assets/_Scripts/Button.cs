@@ -13,10 +13,13 @@ public class Button : MonoBehaviour
     private PlatformMoveOnEvent platformMoveOnEvent;
     public bool StopsOnButtonUp;
 
+    private Vector3 startPosition;
+
 
     private void Start()
     {
         platformMoveOnEvent = gameObject.GetComponentInChildren<PlatformMoveOnEvent>();
+        startPosition = transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -34,7 +37,7 @@ public class Button : MonoBehaviour
 
         if (platformMoveOnEvent != null)
         {
-            platformMoveOnEvent.enabled = true;
+            platformMoveOnEvent.MoveToWaypoint = true;
         }
         
         image.sprite = ButtonDown;
@@ -48,7 +51,9 @@ public class Button : MonoBehaviour
 
         if(platformMoveOnEvent != null && StopsOnButtonUp)
         {
-            platformMoveOnEvent.enabled = false;
+            platformMoveOnEvent.MoveToWaypoint = false;
         }
     }
+
+    
 }

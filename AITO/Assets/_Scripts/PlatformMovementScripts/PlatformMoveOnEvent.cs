@@ -15,10 +15,12 @@ public class PlatformMoveOnEvent : MonoBehaviour
     float step;
     public Vector3 startPos;
 
+    public bool MoveToWaypoint = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        this.enabled = false;
+        //this.enabled = false;
         step = speed * Time.deltaTime;
         c = Waypoints[0];
         finalIndex = Waypoints.Length - 1;
@@ -26,29 +28,43 @@ public class PlatformMoveOnEvent : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        //Debug.Log(Vector3.Distance(transform.position, c.position));
-        if (Vector3.Distance(transform.position, c.position) <= minDist)
+        if (MoveToWaypoint)
         {
-            //if they are close enough, the destination iterates to the next one
-            curIndex++;
+            Debug.Log(Vector3.Distance(transform.position, c.position));
+            if (Vector3.Distance(transform.position, c.position) >= minDist)
+            {
+                //if they are close enough, the destination iterates to the next one
+                curIndex++;
 
-            //checking to see if the current index is bigger than the number of waypoints
-            if (curIndex > finalIndex)
-            {
-                //and stopping the platform if it is
-                speed = 0;
-                //hopefully turning off this script??
-                this.enabled = false;
-            }
-            else
-            {
-                //setting the destination to the current index
-                c = Waypoints[curIndex];
+                //checking to see if the current index is bigger than the number of waypoints
+                if (curIndex > finalIndex)
+                {
+                    //and stopping the platform if it is
+                    speed = 0;
+                    //hopefully turning off this script??
+                    
+                }
+                else
+                {
+                    //setting the destination to the current index
+                    c = Waypoints[curIndex];
+                }
+                //moving to the destination
+                //Debug.Log("moving");
+                transform.position = Vector2.MoveTowards(transform.position, c.position, step);
             }
         }
-        //moving to the destination
-        transform.position = Vector2.MoveTowards(transform.position, c.position, step);
+        else
+        {
+            //Debug.Log("reversing");
+
+            if (Vector3.Distance(transform.position, startPos) >= minDist)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, startPos, step);
+            }
+        }
+        
     }
 }
