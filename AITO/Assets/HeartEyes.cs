@@ -2,18 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class HeartEyes : MonoBehaviour
 {
     [SerializeField] private Sprite heartEyeSprite;
-    private Sprite original;
+    [SerializeField] private Sprite feet;
+    [SerializeField] private Sprite move;
     private SpriteRenderer sp;
 
+    private bool idle;
+    private float timer;
     private void Start()
     {
         sp = this.GetComponent<SpriteRenderer>();
-        original = sp.sprite;
-        
+
         PlayerFriendControl.CollectFriend += ShowHeartEyes;
 
     }
@@ -37,10 +40,41 @@ public class HeartEyes : MonoBehaviour
         
     }
 
+    
+    private void LateUpdate()
+    {
+        Transform t = this.transform;
+        if (!idle)
+        {
+            if (t.rotation.z == 0 && t.localScale.x == 1f)
+            {
+                timer += Time.deltaTime;
+
+                if (timer > 1.5f)
+                {
+                    idle = true;
+                    sp.sprite = feet;
+                }
+                
+            }
+        }
+        else
+        {
+            if (t.rotation.z != 0 || t.localScale.x != 1f)
+            {
+                idle = false;
+                sp.sprite = move;
+                timer = 0;
+
+            }
+        }
+        
+    }
+
     IEnumerator Eyes()
     {
         sp.sprite = heartEyeSprite;
         yield return new WaitForSeconds(2);
-        sp.sprite = original;
+        sp.sprite = move;
     }
 }

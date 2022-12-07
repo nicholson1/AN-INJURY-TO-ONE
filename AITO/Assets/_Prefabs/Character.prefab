@@ -19854,6 +19854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartEyeSprite: {fileID: 21300000, guid: 36bead09625c97249bcdca2dd3b8f9de, type: 3}
+  feet: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
+  move: {fileID: 21300000, guid: 55b36b28c8639814d862c07c3fe49494, type: 3}
 --- !u!1 &5571253414617459534
 GameObject:
   m_ObjectHideFlags: 0
