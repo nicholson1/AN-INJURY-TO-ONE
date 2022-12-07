@@ -14773,7 +14773,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 965
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -19720,6 +19720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animation: {fileID: 6645602359868614745}
+  isPlayer: 1
 --- !u!1 &5571253413257763223
 GameObject:
   m_ObjectHideFlags: 0
@@ -19732,6 +19733,7 @@ GameObject:
   - component: {fileID: 5571253413257763221}
   - component: {fileID: 1446827424136270964}
   - component: {fileID: 1839095369}
+  - component: {fileID: 1068952772}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -19747,8 +19749,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5571253413257763223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.685, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.09, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5111579451706448783}
@@ -19795,7 +19797,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 9ec0ca269ec0b4f4fa12877c83d9dd88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55b36b28c8639814d862c07c3fe49494, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19839,6 +19841,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: a291c615efbc85141ab2fa8c247041c4, type: 2}
+--- !u!114 &1068952772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5571253413257763223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4650dc3e6badd88498d4f0028ed3eec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartEyeSprite: {fileID: 21300000, guid: 5aa76c32264f4c14790c04c867a5e86d, type: 3}
 --- !u!1 &5571253414617459534
 GameObject:
   m_ObjectHideFlags: 0
@@ -20298,7 +20313,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e838edadfae42f04ea5f2d8dcd7641af, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

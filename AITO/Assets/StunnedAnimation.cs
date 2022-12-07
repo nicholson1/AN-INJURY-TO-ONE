@@ -42,13 +42,17 @@ public class StunnedAnimation : MonoBehaviour
         
         
     }
-    private void ShowFriendAnimation(bool show)
+    private void ShowFriendAnimation(GameObject friendGettingStunned)
     {
+        if (friendGettingStunned == this.transform.parent.gameObject)
+        {
+            animation.SetActive(true);
         
-        animation.SetActive(show);
+            timer = 2f;
+            electrofriend = true;
+        }
         
-        timer = 2f;
-        electrofriend = true;
+        
         
         
     }

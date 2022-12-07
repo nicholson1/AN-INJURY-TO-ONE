@@ -13,7 +13,7 @@ public class Hazard : MonoBehaviour
     public static event Action FrRespawn;
     
     public static event Action<Boolean> StunThePlayer;
-    public static event Action<Boolean> StunTheFriend;
+    public static event Action<GameObject> StunTheFriend;
 
 
     //the player
@@ -109,7 +109,7 @@ public class Hazard : MonoBehaviour
                     frb.AddForce(frb.velocity * -2f , ForceMode2D.Impulse);
                     //pc.SetVelocity(pc.Velocity * -.5f);
                     //electricTimer = .5f;
-                    StunTheFriend(true);
+                    StunTheFriend(Fwiend);
 
                 }
                 

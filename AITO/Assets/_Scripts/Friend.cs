@@ -62,10 +62,20 @@ public class Friend : MonoBehaviour
     
     private void DoFollow()
     {
-        if (Vector2.Distance(FollowTarget.position, transform.position) > followDistance)
+        float dist = Vector2.Distance(FollowTarget.position, transform.position);
+        if (dist > followDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, FollowTarget.position,
-                moveSpeed * Time.deltaTime);
+            if (dist > 40)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, FollowTarget.position,
+                    moveSpeed * dist * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector2.MoveTowards(transform.position, FollowTarget.position,
+                    moveSpeed * Time.deltaTime);
+            }
+            
         }
        
     }
