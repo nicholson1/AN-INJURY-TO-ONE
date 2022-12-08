@@ -11,6 +11,7 @@ TagManager:
   - DeathArea
   - CameraTransitionTrigger
   - WalkableArea
+  - Platform
   layers:
   - Default
   - TransparentFX

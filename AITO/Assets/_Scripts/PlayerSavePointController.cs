@@ -137,6 +137,11 @@ public class PlayerSavePointController : MonoBehaviour
         {
             this.isOnGround = true;
         }
+
+        if (collision.gameObject.tag == "Platform")
+        {
+            this.transform.SetParent(collision.gameObject.transform);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -144,6 +149,11 @@ public class PlayerSavePointController : MonoBehaviour
         if (collision.gameObject.tag == "WalkableArea")
         {
             this.isOnGround = false;
+        }
+
+        if (collision.gameObject.tag == "Platform")
+        {
+            this.transform.SetParent(null);
         }
     }
 

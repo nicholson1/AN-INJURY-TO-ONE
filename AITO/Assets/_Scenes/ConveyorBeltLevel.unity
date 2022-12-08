@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72446400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76, y: 1, z: -20}
+  m_LocalPosition: {x: 0, y: 1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -571,11 +571,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 959239994194536188, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_Name
-      value: platform (1)
+      value: platform2
       objectReference: {fileID: 0}
     - target: {fileID: 959239994194536188, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_TagString
-      value: WalkableArea
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 6570408607448502750, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_Points.Array.data[0].x
@@ -652,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5571253414617459534, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
@@ -966,7 +966,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3123001635349711936, guid: 6689690485587874e941f7b2fdf641dd, type: 3}
       propertyPath: m_Name
-      value: LavaFire
+      value: LavaFire1
       objectReference: {fileID: 0}
     - target: {fileID: 3123001635349711943, guid: 6689690485587874e941f7b2fdf641dd, type: 3}
       propertyPath: m_RootOrder
@@ -11152,11 +11152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 959239994194536188, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_Name
-      value: platform (2)
+      value: platform3
       objectReference: {fileID: 0}
     - target: {fileID: 959239994194536188, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_TagString
-      value: WalkableArea
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 6570408607448502750, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_Points.Array.data[0].x
@@ -11265,7 +11265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2382658233558195183, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
       propertyPath: m_Name
-      value: Friend
+      value: Friend1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
@@ -12702,7 +12702,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7317013309217143220, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Button1
       objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143222, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_Enabled
@@ -13763,7 +13763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5571253414617459534, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
@@ -13828,11 +13828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 959239994194536188, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_Name
-      value: platform
+      value: platform1
       objectReference: {fileID: 0}
     - target: {fileID: 959239994194536188, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_TagString
-      value: WalkableArea
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 6570408607448502750, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
       propertyPath: m_Points.Array.data[0].x
@@ -14870,7 +14870,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3123001635349711936, guid: 6689690485587874e941f7b2fdf641dd, type: 3}
       propertyPath: m_Name
-      value: LavaFire (1)
+      value: LavaFire2
       objectReference: {fileID: 0}
     - target: {fileID: 3123001635349711943, guid: 6689690485587874e941f7b2fdf641dd, type: 3}
       propertyPath: m_RootOrder
@@ -14927,7 +14927,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3123001635349711936, guid: 6689690485587874e941f7b2fdf641dd, type: 3}
       propertyPath: m_Name
-      value: LavaFire (2)
+      value: LavaFire3
       objectReference: {fileID: 0}
     - target: {fileID: 3123001635349711943, guid: 6689690485587874e941f7b2fdf641dd, type: 3}
       propertyPath: m_RootOrder
@@ -14984,37 +14984,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3851391774799343942, guid: 5d70521c5b370444db3e979b5d6e356f, type: 3}
   m_PrefabInstance: {fileID: 522604495}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1893204322
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1893204323}
-  m_Layer: 7
-  m_Name: WaypointLava2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1893204323
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893204322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1946245841}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923339671
 GameObject:
   m_ObjectHideFlags: 0
