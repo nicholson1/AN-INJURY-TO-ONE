@@ -32,7 +32,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
     {
         if (MoveToWaypoint)
         {
-            Debug.Log(Vector3.Distance(transform.position, c.position));
+            //Debug.Log(Vector3.Distance(transform.position, c.position));
             if (Vector3.Distance(transform.position, c.position) >= minDist)
             {
                 //if they are close enough, the destination iterates to the next one
