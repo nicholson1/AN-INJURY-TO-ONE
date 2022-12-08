@@ -140,6 +140,7 @@ public class PlayerSavePointController : MonoBehaviour
 
         if (collision.gameObject.tag == "Platform")
         {
+            this.isOnGround = true;
             this.transform.SetParent(collision.gameObject.transform);
         }
     }
@@ -153,6 +154,7 @@ public class PlayerSavePointController : MonoBehaviour
 
         if (collision.gameObject.tag == "Platform")
         {
+            this.isOnGround = false;
             this.transform.SetParent(null);
         }
     }
