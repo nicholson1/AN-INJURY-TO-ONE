@@ -38,11 +38,15 @@ public class GameManager : MonoBehaviour
     {
         PuzzleTransitions.TransitionRight += TriggerTransition;
 
+        // JT: for horizontal trigger
+        PuzzleTransitionVertical.TransitionUp += TriggerTransitionVertical;
     }
     private void OnDestroy()
     {
         PuzzleTransitions.TransitionRight -= TriggerTransition;
 
+        // JT: for horizontal trigger
+        PuzzleTransitionVertical.TransitionUp -= TriggerTransitionVertical;
     }
 
     private void TriggerTransition(bool isRight)
@@ -65,6 +69,24 @@ public class GameManager : MonoBehaviour
             MoveCamera(CameraPositions[cameraPosIndex].position);
         }
     }
- 
+
+    // JT: for horizontal trigger
+    private void TriggerTransitionVertical(bool isUp)
+    {
+        if (isUp)
+        {
+            Debug.Log("Go Up");
+            cameraPosIndex += 1;
+            MoveCamera(CameraPositions[cameraPosIndex].position);
+        }
+        else
+        {
+            Debug.Log("Go Down");
+
+            cameraPosIndex -= 1;
+            MoveCamera(CameraPositions[cameraPosIndex].position);
+        }
+    }
+
 
 }

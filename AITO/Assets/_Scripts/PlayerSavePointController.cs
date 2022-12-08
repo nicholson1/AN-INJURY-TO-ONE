@@ -22,6 +22,8 @@ public class PlayerSavePointController : MonoBehaviour
     private bool isFreezing = false;
     // duration of freezing movement time after player respawn
     private float freezingDuration = 1f;
+    // check whether player is getting through a horizontal camera transition trigger
+    private bool getThroughHorizontal = false;
 
     // singleton pattern only have one static instance, initiated at the beginning in SaveLoadController.cs,
     // write this line for updating the variables inside
@@ -124,6 +126,12 @@ public class PlayerSavePointController : MonoBehaviour
         {
             Debug.Log("Player Information Saved");
             instance.UpdateSavedPlayerPosition(this.transform.position);
+
+            // check whether player gets through a horizonral camera transition trigger
+            if (collision.gameObject.GetComponent<PuzzleTransitionVertical>() != null)
+            {
+                this.getThroughHorizontal = true;
+            }
         }
 
         if (collision.gameObject.tag == "DeathArea")
@@ -188,7 +196,21 @@ public class PlayerSavePointController : MonoBehaviour
             Debug.Log("not on ground Disable");
         }
         this.GetComponent<PlayerController>().SetAcceleration(0f);
-        this.GetComponent<PlayerController>().SetMoveClamp(0f);
+        
+        //this.GetComponent<PlayerController>().SetMoveClamp(0f);
+
+        // if player gets through a horizonral camera transition trigger, don't set MoveClamp to 0,
+        // otherwise it will fall down directly
+        if (!this.getThroughHorizontal)
+        {
+            this.GetComponent<PlayerController>().SetMoveClamp(0f);
+        }
+        else
+        {
+            this.GetComponent<PlayerController>().SetMoveClamp(this.savedMoveClamp);
+        }
+        this.getThroughHorizontal = false;
+
         this.GetComponent<PlayerController>().SetJumpHeight(0f);
         this.GetComponent<PlayerController>().enabled = true;
         this.isFreezing = false;
