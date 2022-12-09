@@ -25,6 +25,9 @@ public class Hazard : MonoBehaviour
 
     //rigidbody of the player
     private Rigidbody2D rb;
+    private Rigidbody2D frb;
+
+
 
     //this is the friend getting respawned but obviously can't call it "Friend" because that's its own class
     private GameObject Fwiend;
@@ -110,7 +113,7 @@ public class Hazard : MonoBehaviour
             {
                 if (electricTimer <= 0)
                 {
-                    Rigidbody2D frb = Fwiend.GetComponent<Rigidbody2D>();
+                    frb = Fwiend.GetComponent<Rigidbody2D>();
                     
                     AddForceZappers(Fwiend.transform.position, frb.velocity, frb);
                     //frb.AddForce(frb.velocity * -2f , ForceMode2D.Impulse);
@@ -153,6 +156,25 @@ public class Hazard : MonoBehaviour
     {
         Fwiend.transform.position = Respawn;
         Fwiend.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (ThisHazard == HazardType.Electro)
+        {
+            if (adjustGrav)
+            {
+                Vector3 v = transform.position - other.gameObject.transform.position;
+                Debug.Log(v);
+                rb.AddForce(-v, ForceMode2D.Impulse);
+            }
+            else if (other.gameObject == Fwiend)
+            {
+                Vector3 v = transform.position - other.gameObject.transform.position;
+                Debug.Log(v);
+                frb.AddForce(-v, ForceMode2D.Impulse);
+            }
+        }
     }
 
     private bool adjustGrav = false;
