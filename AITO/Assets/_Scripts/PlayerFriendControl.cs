@@ -20,15 +20,18 @@ public class PlayerFriendControl : MonoBehaviour
     private void Start()
     {
         PuzzleTransitions.TransitionRight += GetFriends;
+        Hazard.ReturnFriends += GetFriends;
 
     }
     private void OnDestroy()
     {
         PuzzleTransitions.TransitionRight -= GetFriends;
+        Hazard.ReturnFriends -= GetFriends;
+
 
     }
 
-    private void GetFriends(bool i)
+    private void GetFriends(bool i = true)
     {
         foreach (Friend f in collectedFriends)
         {
@@ -134,7 +137,7 @@ public class PlayerFriendControl : MonoBehaviour
         {
             ThrowMyFriend(power);
 
-            Debug.Log(power);
+            //.Log(power);
             power = 0;
             mouseDown = false;
             pointer.SetActive(false);

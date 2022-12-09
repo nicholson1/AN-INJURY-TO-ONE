@@ -18,6 +18,8 @@ public class Friend : MonoBehaviour
 
     [SerializeField] private LayerMask interactLayers;
 
+    private Collider2D[] _interactables;
+
     private void Start()
     {
         PlayerFriendControl.CollectFriend += CollectedTrigger;
@@ -52,7 +54,17 @@ public class Friend : MonoBehaviour
 
     private bool CanSeeInteract()
     {
-        return true;
+         _interactables = Physics2D.OverlapCircleAll(this.transform.position, interactRange, interactLayers);
+
+        if (_interactables.Length > 0)
+        {
+            //Debug.Log("i can see interactable");
+            return true;
+            
+        }
+
+        return false;
+
     }
 
     private bool CanFollow()
@@ -82,9 +94,10 @@ public class Friend : MonoBehaviour
 
     private void DoInteract()
     {
-        Collider2D[] _interactables =Physics2D.OverlapCircleAll(this.transform.position, interactRange, interactLayers);
 
         Transform target = CheckInteractables(_interactables);
+        //Debug.Log(target);
+        
         if (target != null)
         {
             transform.position =
@@ -101,6 +114,7 @@ public class Friend : MonoBehaviour
     {
         //check if in sight
         //check if being interacted with
+        //Debug.Log(interactables.Length);
         foreach (var col in interactables)
         {
             

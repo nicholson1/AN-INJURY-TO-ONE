@@ -49,9 +49,13 @@ public class Button : MonoBehaviour
         image.sprite = ButtonUp;
         GetComponent<Interactable>().isInteractable = true;
 
+
         if(platformMoveOnEvent != null && StopsOnButtonUp)
         {
             platformMoveOnEvent.MoveToWaypoint = false;
+            platformMoveOnEvent.curIndex = 0;
+            platformMoveOnEvent.c = platformMoveOnEvent.Waypoints[0];
+
         }
     }
 

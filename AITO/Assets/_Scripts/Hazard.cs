@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TarodevController;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Hazard : MonoBehaviour
@@ -11,9 +12,12 @@ public class Hazard : MonoBehaviour
 
     //event to alert the player save point script that we need the position at which to respawn a friend
     public static event Action FrRespawn;
+    public static event Action<bool> ReturnFriends;
     
     public static event Action<Boolean> StunThePlayer;
     public static event Action<GameObject> StunTheFriend;
+    
+    
 
 
     //the player
@@ -69,14 +73,16 @@ public class Hazard : MonoBehaviour
                 Debug.Log("player lava");
                 //calls to JT's player save system to respawn the player when they fall into the lava
                 Respawn?.Invoke();
+                ReturnFriends(true);
             }
 
             if (ThisHazard == HazardType.Electro)
             {
                 if (electricTimer <= 0)
                 {
-                    
-                    rb.AddForce(pc.Velocity * -1.5f , ForceMode2D.Impulse);
+                    //rb.AddForce(pc.Velocity * -1.5f , ForceMode2D.Impulse);
+                    AddForceZappers(pc.transform.position,pc.Velocity ,rb);
+
                     //pc.SetVelocity(pc.Velocity * -.5f);
                     electricTimer = .5f;
                     StunPlayer();
@@ -106,7 +112,8 @@ public class Hazard : MonoBehaviour
                 {
                     Rigidbody2D frb = Fwiend.GetComponent<Rigidbody2D>();
                     
-                    frb.AddForce(frb.velocity * -2f , ForceMode2D.Impulse);
+                    AddForceZappers(Fwiend.transform.position, frb.velocity, frb);
+                    //frb.AddForce(frb.velocity * -2f , ForceMode2D.Impulse);
                     //pc.SetVelocity(pc.Velocity * -.5f);
                     //electricTimer = .5f;
                     StunTheFriend(Fwiend);
@@ -199,6 +206,58 @@ public class Hazard : MonoBehaviour
 
         //pc.SetVelocity(Vector3.zero);
         //Debug.Log("enabled");
+    }
+
+    private void AddForceZappers(Vector3 colliderPos, Vector3 velocity, Rigidbody2D rb)
+    {
+        Vector2 vel = velocity;
+        
+        //calculate if we flip x or y
+        Vector2 temp = colliderPos - this.transform.position;
+
+        Debug.Log(vel);
+
+        if (Mathf.Abs(vel.x) > Mathf.Abs(vel.y))
+        {
+            Debug.Log("flip y");
+            vel.y *= -1;
+            vel.x += 2;
+        }
+        else
+        {
+            Debug.Log("flip x");
+            vel.y += 2;
+
+            vel.x *= -1;
+        }
+        // if (temp.y > 0)
+        // {
+        //     if ((temp.x) > (temp.y))
+        //     {
+        //     
+        //         vel.x *= -1;
+        //     }
+        //     else
+        //     {
+        //         vel.y *= -1;
+        //     }
+        // }
+        // else
+        // {
+        //     if ((temp.x) > (temp.y))
+        //     {
+        //     
+        //         vel.y *= -1;
+        //     }
+        //     else
+        //     {
+        //         vel.x *= -1;
+        //     }
+        // }
+        
+
+
+        rb.AddForce(vel * -1.5f , ForceMode2D.Impulse);
     }
 
     //oil currently turned off

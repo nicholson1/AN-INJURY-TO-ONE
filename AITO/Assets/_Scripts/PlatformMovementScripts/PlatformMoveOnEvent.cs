@@ -6,9 +6,9 @@ public class PlatformMoveOnEvent : MonoBehaviour
 {
     //needs: array of waypoints, current destination
     public Transform[] Waypoints;
-    private Transform c;
+    public Transform c;
     private int finalIndex;
-    private int curIndex = 0;
+    public int curIndex = 0;
     private float minDist = 0.1f;
 
     public float speed = 0.4f;
@@ -33,8 +33,10 @@ public class PlatformMoveOnEvent : MonoBehaviour
         if (MoveToWaypoint)
         {
             //Debug.Log(Vector3.Distance(transform.position, c.position));
-            if (Vector3.Distance(transform.position, c.position) >= minDist)
+            if (Vector3.Distance(transform.position, c.position) <= minDist)
             {
+                //Debug.Log("this happend");
+
                 //if they are close enough, the destination iterates to the next one
                 curIndex++;
 
@@ -43,6 +45,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
                 {
                     //and stopping the platform if it is
                     speed = 0;
+
                     //hopefully turning off this script??
                     
                 }
@@ -53,8 +56,9 @@ public class PlatformMoveOnEvent : MonoBehaviour
                 }
                 //moving to the destination
                 //Debug.Log("moving");
-                transform.position = Vector2.MoveTowards(transform.position, c.position, step);
+                
             }
+            transform.position = Vector2.MoveTowards(transform.position, c.position, step);
         }
         else
         {

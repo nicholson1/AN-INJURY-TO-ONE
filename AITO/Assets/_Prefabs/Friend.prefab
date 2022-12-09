@@ -89,10 +89,10 @@ MonoBehaviour:
   followDistance: 1
   HasBeenCollected: 0
   moveSpeed: 10
-  interactRange: 0
+  interactRange: 5
   interactLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &2382658234918414646
 GameObject:
   m_ObjectHideFlags: 0
