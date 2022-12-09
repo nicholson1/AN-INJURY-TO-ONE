@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea151f49aac7214d97d39c5d5cba61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPool: {fileID: 1797678862}
   detectTarget: {fileID: 774205108}
-  trackTriggerDist: 3
+  trackTriggerDist: 20
   rotationModifier: 180
   trackRotateSpeed: 10
   automateRotateSpeed: 10
@@ -462,6 +463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7317013309217143217, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
+      propertyPath: isInteractable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143220, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_Name
       value: Button1
@@ -628,6 +633,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7317013309217143217, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
+      propertyPath: isInteractable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143220, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_Name
       value: Button3
@@ -721,6 +730,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7317013309217143217, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
+      propertyPath: isInteractable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143220, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_Name
       value: Button4
@@ -995,6 +1008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7317013309217143217, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
+      propertyPath: isInteractable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7317013309217143220, guid: c434ca9ec73f74ab8b10bde68c894aef, type: 3}
       propertyPath: m_Name
       value: Button2
@@ -1075,8 +1092,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea151f49aac7214d97d39c5d5cba61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPool: {fileID: 1797678862}
   detectTarget: {fileID: 774205108}
-  trackTriggerDist: 3
+  trackTriggerDist: 20
   rotationModifier: 180
   trackRotateSpeed: 10
   automateRotateSpeed: 10
@@ -1156,7 +1174,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
       propertyPath: interactRange
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2382658233558195180, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
       propertyPath: m_RootOrder
@@ -11611,6 +11633,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2382658233558195180, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -34378,6 +34408,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2382658233558195180, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -34506,7 +34544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233255529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 2.99, z: -20}
+  m_LocalPosition: {x: 32.6, y: 26.7, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34586,6 +34624,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382658233558195177, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
+      propertyPath: interactLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2382658233558195180, guid: d7fab5686493e6741b8d7fa1bbaef02b, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -35143,11 +35189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5571253414617459533, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.1
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 5571253414617459533, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.8
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 5571253414617459533, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35187,6 +35233,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89de7e65f4b1d4dbf9552f1606e8f9, type: 3}
+--- !u!114 &1797678862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1216750929474618156, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+  m_PrefabInstance: {fileID: 1216750931166651426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25993adf7c173e946921fb05b3beb2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1848568363
 GameObject:
   m_ObjectHideFlags: 0
@@ -37793,8 +37850,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea151f49aac7214d97d39c5d5cba61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPool: {fileID: 1797678862}
   detectTarget: {fileID: 774205108}
-  trackTriggerDist: 3
+  trackTriggerDist: 20
   rotationModifier: 180
   trackRotateSpeed: 10
   automateRotateSpeed: 10
@@ -40700,3 +40758,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1216750931166651426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.865253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.030046
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.896786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618157, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216750929474618159, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
+      propertyPath: m_Name
+      value: BulletObjectPool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15c5d39560bf12849be922e185a4077f, type: 3}
