@@ -8,6 +8,8 @@ public class ButtonHazard : MonoBehaviour
     [SerializeField] private Sprite ButtonDown;
     [SerializeField] private SpriteRenderer image;
 
+    [SerializeField] private GameObject itsHazard;
+
     private HazardDisableOnEvent hazardDisable;
     public bool StopsOnButtonUp;
 
@@ -30,10 +32,12 @@ public class ButtonHazard : MonoBehaviour
     private void PushHazardButton()
     {
 
-        if (hazardDisable != null)
-        {
-            hazardDisable.turnOff = true;
-        }
+        //if (hazardDisable != null)
+        //{
+        //    hazardDisable.turnOff = true;
+        //}
+
+        itsHazard.SetActive(false);
 
         image.sprite = ButtonDown;
         GetComponent<Interactable>().isInteractable = false;
@@ -44,9 +48,11 @@ public class ButtonHazard : MonoBehaviour
         image.sprite = ButtonUp;
         GetComponent<Interactable>().isInteractable = true;
 
-        //if (hazardDisable != null && StopsOnButtonUp)
-        //{
-        //    hazardDisable.turnOff = false;
-        //}
+        if (hazardDisable != null && StopsOnButtonUp)
+        {
+            hazardDisable.turnOff = false;
+        }
+
+        itsHazard.SetActive(true);
     }
 }

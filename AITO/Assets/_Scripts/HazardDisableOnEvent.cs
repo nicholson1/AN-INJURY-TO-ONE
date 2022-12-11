@@ -19,5 +19,9 @@ public class HazardDisableOnEvent : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 }
