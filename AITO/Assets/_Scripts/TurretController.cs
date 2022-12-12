@@ -9,7 +9,7 @@ namespace ObjectPool.Gun
         //object pool stuff
         public BulletObjectPoolOptimized bulletPool;
         private float fireTimer;
-        private readonly float fireInterval = 2.5f;
+        public float fireInterval = 2.5f;
         
         // transform of the target for turrent to detect and track
         public Transform detectTarget;
