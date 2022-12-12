@@ -11,7 +11,7 @@ public class Hazard : MonoBehaviour
     public static event Action Respawn;
 
     //event to alert the player save point script that we need the position at which to respawn a friend
-    public static event Action FrRespawn;
+    public static event Action<GameObject> FrRespawn;
     public static event Action<bool> ReturnFriends;
     
     public static event Action<Boolean> StunThePlayer;
@@ -64,12 +64,17 @@ public class Hazard : MonoBehaviour
         //defAccel = _acceleration;
         //defDeccel = _deAcceleration;
 
-        PlayerSavePointController.FriendRespawn += FriendLava;
+        //PlayerSavePointController.FriendRespawn += FriendLava;
 
         if (ThisHazard == HazardType.Turret)
         {
             b = GetComponent<BulletNew>();
         }
+    }
+
+    private void OnDestroy()
+    {
+        //PlayerSavePointController.FriendRespawn -= FriendLava;
     }
 
     //variable to hold what type of hazard the current hazard is
@@ -124,7 +129,7 @@ public class Hazard : MonoBehaviour
                 //save the fwiend because we need to change its position in a second
                 
                 //place a call to the save point controller to get our respawn spot
-                FrRespawn?.Invoke();
+                FrRespawn?.Invoke(Fwiend);
             }
             
             if (ThisHazard == HazardType.Electro)
@@ -146,7 +151,7 @@ public class Hazard : MonoBehaviour
             {
                 Debug.Log("friend turret");
                 //calls to JT's player save system to respawn the player when they fall into the lava
-                FrRespawn?.Invoke();
+                FrRespawn?.Invoke(Fwiend);
                 b.pooler.DisableBullet(b);
 
                 //ReturnFriends(true);
@@ -179,11 +184,12 @@ public class Hazard : MonoBehaviour
 
     //function to respawn the player at the saved respawn point
     //and make its velocity zero so it doesn't go flying off lol
-    private void FriendLava(Vector3 Respawn) 
-    {
-        Fwiend.transform.position = Respawn;
-        Fwiend.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-    }
+    // private void FriendLava(Vector3 Respawn) 
+    // {
+    //     Debug.Log("Thisran");
+    //     Fwiend.transform.position = Respawn;
+    //     Fwiend.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    // }
 
     private void OnTriggerStay2D(Collider2D other)
     {

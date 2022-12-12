@@ -167,6 +167,8 @@ public class PlayerSavePointController : MonoBehaviour
         }
     }
 
+    
+
     private void OverwritePlayerPosition()
     {
         this.isOverwriting = true;
@@ -235,9 +237,11 @@ public class PlayerSavePointController : MonoBehaviour
     }
 
     //HL: function that provides respawn coordinates to the hazard script
-    private void SendRespawnPosition() 
+    private void SendRespawnPosition(GameObject f)
     {
-        FriendRespawn?.Invoke(instance.ReturnSavedPlayerPosition());
+        f.transform.position = instance.ReturnSavedPlayerPosition();
+        
+        f.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     // JT: as an observer of camera moves
