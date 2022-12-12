@@ -52,6 +52,10 @@ public class BulletPooler : MonoBehaviour
         BulletNew b = GetBullet();
         b.MoveDirection = targetAngle;
         b.transform.position = startLocation;
+        b.transform.eulerAngles =
+            new Vector3(0, 0,
+                Vector2.Angle(targetAngle,
+                    Vector2.up) + 90); //(new Vector3(b.transform.localPosition.x + targetAngle.x, b.transform.localPosition.y + targetAngle.y, 0));
     }
     
 }
