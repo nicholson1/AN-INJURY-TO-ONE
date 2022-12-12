@@ -13,6 +13,7 @@ public class HeartEyes : MonoBehaviour
 
     private bool idle;
     private float timer;
+    public bool isFriend;
     private void Start()
     {
         sp = this.GetComponent<SpriteRenderer>();
@@ -46,7 +47,7 @@ public class HeartEyes : MonoBehaviour
         Transform t = this.transform;
         if (!idle)
         {
-            if (t.rotation.z == 0 && t.localScale.x == 1f)
+            if ((t.rotation.z == 0 && t.localScale.x == 1f) || (isFriend && this.transform.parent.GetComponentInParent<Rigidbody2D>().velocity != Vector2.zero ) )
             {
                 timer += Time.deltaTime;
 
@@ -54,6 +55,7 @@ public class HeartEyes : MonoBehaviour
                 {
                     idle = true;
                     sp.sprite = feet;
+                    Debug.Log("show feet");
                 }
                 
             }
@@ -76,5 +78,6 @@ public class HeartEyes : MonoBehaviour
         sp.sprite = heartEyeSprite;
         yield return new WaitForSeconds(2);
         sp.sprite = move;
+        idle = false;
     }
 }

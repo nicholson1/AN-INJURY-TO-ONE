@@ -21,6 +21,8 @@ namespace ObjectPool.Gun
         // the rotation speed for turrent to rotate when not tracking its target
         public float automateRotateSpeed = 10f;
 
+        
+
         private float dist;
 
         // Start is called before the first frame update
@@ -33,8 +35,9 @@ namespace ObjectPool.Gun
         }
 
         // Update is called once per frame
-        void Update()
+        void LateUpdate()
         {
+            
             // the value range of localEulerAngles in unity2D is 0 to 360
             //Debug.Log(transform.localEulerAngles.z);
 

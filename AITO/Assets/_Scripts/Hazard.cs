@@ -40,12 +40,15 @@ public class Hazard : MonoBehaviour
     private float electricTimer = 0;
     private PlayerController pc;
 
+    private BulletNew b;
+
     //types of hazards
     public enum HazardType 
     {
         Lava,
         Oil,
-        Electro
+        Electro,
+        Turret,
     }
 
     private void Start()
@@ -62,6 +65,11 @@ public class Hazard : MonoBehaviour
         //defDeccel = _deAcceleration;
 
         PlayerSavePointController.FriendRespawn += FriendLava;
+
+        if (ThisHazard == HazardType.Turret)
+        {
+            b = GetComponent<BulletNew>();
+        }
     }
 
     //variable to hold what type of hazard the current hazard is
@@ -93,6 +101,16 @@ public class Hazard : MonoBehaviour
                 }
                 
             }
+            
+            if (ThisHazard == HazardType.Turret) 
+            {
+                Debug.Log("player turret");
+                //calls to JT's player save system to respawn the player when they fall into the lava
+                Respawn?.Invoke();
+                ReturnFriends(true);
+                
+                b.pooler.DisableBullet(b);
+            }
         }
 
         if (collision.gameObject.CompareTag("Friend"))
@@ -123,6 +141,15 @@ public class Hazard : MonoBehaviour
 
                 }
                 
+            }
+            if (ThisHazard == HazardType.Turret) 
+            {
+                Debug.Log("friend turret");
+                //calls to JT's player save system to respawn the player when they fall into the lava
+                FrRespawn?.Invoke();
+                b.pooler.DisableBullet(b);
+
+                //ReturnFriends(true);
             }
         }
     }
