@@ -55,7 +55,7 @@ public class HeartEyes : MonoBehaviour
                 {
                     idle = true;
                     sp.sprite = feet;
-                    Debug.Log("show feet");
+                    //Debug.Log("show feet");
                 }
                 
             }
