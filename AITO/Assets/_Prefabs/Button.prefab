@@ -134,6 +134,8 @@ MonoBehaviour:
   ButtonUp: {fileID: -610759983, guid: 6766a80d2ab4752438edf3c222102ddd, type: 3}
   ButtonDown: {fileID: -149700318, guid: ab7186adffcefe8479e32df7805d5ff7, type: 3}
   image: {fileID: 7317013309113905859}
+  StopsOnButtonUp: 0
+  _additionalTargets: []
 --- !u!61 &7317013309217143216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,4 +174,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d7d9ba41933bf469bc88aac671b14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteractable: 0
+  isInteractable: 1
