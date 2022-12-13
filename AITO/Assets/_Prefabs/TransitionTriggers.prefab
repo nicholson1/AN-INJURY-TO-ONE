@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 697398725181664263}
   m_Layer: 0
   m_Name: TransitionTriggers
-  m_TagString: Untagged
+  m_TagString: trigger transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 697398725929966812}
   m_Layer: 0
   m_Name: FinishPuzzle (2)
-  m_TagString: Untagged
+  m_TagString: trigger transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 697398726368140914}
   m_Layer: 0
   m_Name: FinishPuzzle
-  m_TagString: Untagged
+  m_TagString: trigger transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 697398726430260826}
   m_Layer: 0
   m_Name: FinishPuzzle (1)
-  m_TagString: Untagged
+  m_TagString: trigger transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 697398726517040170}
   m_Layer: 0
   m_Name: FinishPuzzle (3)
-  m_TagString: Untagged
+  m_TagString: trigger transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

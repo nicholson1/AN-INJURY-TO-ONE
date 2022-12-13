@@ -12,6 +12,7 @@ TagManager:
   - CameraTransitionTrigger
   - WalkableArea
   - Platform
+  - trigger transition
   layers:
   - Default
   - TransparentFX

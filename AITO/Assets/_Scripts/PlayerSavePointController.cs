@@ -254,5 +254,6 @@ public class PlayerSavePointController : MonoBehaviour
     {
         Debug.Log("camera done moving");
         RecoverWalking();
+        instance.UpdateSavedPlayerPosition(this.transform.position);
     }
 }

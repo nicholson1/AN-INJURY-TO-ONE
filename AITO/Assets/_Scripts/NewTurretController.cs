@@ -44,26 +44,33 @@ namespace ObjectPool.Gun
             if (detectTarget == null)
             {
                 _targets = Physics2D.OverlapCircleAll(this.transform.position, trackTriggerDist * 3, TargetLayers);
+                Debug.Log(_targets.Length);
             }
 
             if (_targets.Length > 0)
             {
                 foreach (var col in _targets)
                 {
-                    if(!(col.CompareTag("Player") || col.CompareTag("Friend")))
-                    {
-                        break;
+                    //Debug.Log(col.name);
+                    if((col.CompareTag("Player") || col.CompareTag("Friend")))
+                    { 
+                        if (Physics2D.Linecast(this.transform.position, col.transform.position))
+                        {
+                            return col.transform;
+
+                        
+                        }
+                        
                     }
                     
-                    if (Physics2D.Linecast(this.transform.position, col.transform.position))
-                    {
-                        return col.transform;
-                    }
-                    else
-                    {
-                        break;
-                    }
+                    
+                    // 
+                    // else
+                    // {
+                    //     break;
+                    // }
                 }
+                //Debug.Log("##################");
             }
 
             
