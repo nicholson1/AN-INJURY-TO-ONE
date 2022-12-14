@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/_Scenes/GameplayScene1.unity
     guid: 3eee512f696d81a4c822557e312e47e3
   - enabled: 1
+    path: Assets/_Scenes/TurretsLevel.unity
+    guid: 8f33aabd81a4f434b8c09cf3c3c05714
+  - enabled: 1
     path: Assets/_Scenes/ConveyorBeltLevel.unity
     guid: 06928617f2b27384fb031675a0c89324
+  - enabled: 1
+    path: Assets/_Scenes/HLGameScene.unity
+    guid: 646bfa1b77a9ce249b24c22d62923044
+  - enabled: 1
+    path: Assets/_Scenes/Neil Level.unity
+    guid: 55a322c35765aff40bcb8de9d8a29aee
   m_configObjects: {}
