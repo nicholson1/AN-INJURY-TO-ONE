@@ -35,6 +35,6 @@ public class BlackFadeController : MonoBehaviour
 
     public void OnFadeComplete()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
     }
 }

@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Neil Level.unity
     guid: 55a322c35765aff40bcb8de9d8a29aee
+  - enabled: 1
+    path: Assets/_Scenes/CutScene2.unity
+    guid: 019b5c523131fdd45a580451975ca659
+  - enabled: 1
+    path: Assets/_Scenes/CutScene1.unity
+    guid: 6f68408b25acf0148990b61f6fdc1b66
   m_configObjects: {}
