@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scene2EndTrigger : SceneEndTriggerController
+public class ZapperSceneEndTrigger : SceneEndTriggerController
 {
     public override void ReturnLog()
     {
         //throw new System.NotImplementedException();
-        Debug.Log("Fire Level End Observered");
+        Debug.Log("Zapper Level End Observered");
     }
 
     public override int ReturnSceneIndex()
@@ -19,7 +19,7 @@ public class Scene2EndTrigger : SceneEndTriggerController
     // Start is called before the first frame update
     void Start()
     {
-        this.sceneIndex = 3;
+        this.sceneIndex = 4;
     }
 
     // Update is called once per frame
