@@ -726,8 +726,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
-  m_Color: {r: 0.9811321, g: 0.48593804, b: 0.862382, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bfcda33bca38909429fa617dac051ffd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1141,8 +1141,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
-  m_Color: {r: 0.9811321, g: 0.48593804, b: 0.862382, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9e7c4a79be542de45b6ed94c2ccd473a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5922,8 +5922,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
-  m_Color: {r: 0.9811321, g: 0.48593804, b: 0.862382, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f805ef24cddc94b4ab732efc90f2bcfe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6268,8 +6268,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
-  m_Color: {r: 0.9811321, g: 0.48593804, b: 0.862382, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 18c5b312941ae6642bb5b9b522d00da2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7694,8 +7694,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
-  m_Color: {r: 0.9811321, g: 0.48593804, b: 0.862382, a: 1}
+  m_Sprite: {fileID: 21300000, guid: eddd4350def3c3f4ab0aa2a80afdc1eb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8907,12 +8907,12 @@ MonoBehaviour:
   - {fileID: 364079524}
   - {fileID: 1648094799}
   hearteyes:
-  - {fileID: 21300000, guid: 3b4d2945693ba834e8504456d474328c, type: 3}
-  - {fileID: 21300000, guid: 3b4d2945693ba834e8504456d474328c, type: 3}
-  - {fileID: 21300000, guid: 3b4d2945693ba834e8504456d474328c, type: 3}
-  - {fileID: 21300000, guid: 3b4d2945693ba834e8504456d474328c, type: 3}
-  - {fileID: 21300000, guid: 3b4d2945693ba834e8504456d474328c, type: 3}
-  - {fileID: 21300000, guid: 3b4d2945693ba834e8504456d474328c, type: 3}
+  - {fileID: 21300000, guid: f37bd44782a641d4e80c0fc520af83ec, type: 3}
+  - {fileID: 21300000, guid: e03ba2fdfba249b48b690a8fa1b10fc5, type: 3}
+  - {fileID: 21300000, guid: cd452e40107d25a43b10c4e88f4ac1af, type: 3}
+  - {fileID: 21300000, guid: 6107c2c30a223304d97fa8f12affdbf1, type: 3}
+  - {fileID: 21300000, guid: d4752ef1b80c6a84aa74521e33c3a59c, type: 3}
+  - {fileID: 21300000, guid: 9aba53b936d9f0f4f8d01566c42cb352, type: 3}
   speed: 2
   target1: {fileID: 471902608}
   target2: {fileID: 748667473}

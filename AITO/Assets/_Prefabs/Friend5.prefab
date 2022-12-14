@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2382658233558195176}
   - component: {fileID: 2382658233558195177}
   m_Layer: 0
-  m_Name: Friend
+  m_Name: Friend5
   m_TagString: Friend
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,8 +168,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 55b36b28c8639814d862c07c3fe49494, type: 3}
-  m_Color: {r: 0.88965535, g: 0.60784316, b: 0.9254902, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 909180854f1eb5e449f94dbd3bb3fade, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -211,9 +211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4650dc3e6badd88498d4f0028ed3eec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartEyeSprite: {fileID: 21300000, guid: 36bead09625c97249bcdca2dd3b8f9de, type: 3}
-  feet: {fileID: 21300000, guid: 5136e76d2c60ce74e8b147c4774cfe73, type: 3}
-  move: {fileID: 21300000, guid: 55b36b28c8639814d862c07c3fe49494, type: 3}
+  heartEyeSprite: {fileID: 21300000, guid: 4d44fa9e9ab819848b161c952ffa1804, type: 3}
+  feet: {fileID: 21300000, guid: 18c5b312941ae6642bb5b9b522d00da2, type: 3}
+  move: {fileID: 21300000, guid: 909180854f1eb5e449f94dbd3bb3fade, type: 3}
+  isFriend: 0
 --- !u!1 &4560162417259729146
 GameObject:
   m_ObjectHideFlags: 0
