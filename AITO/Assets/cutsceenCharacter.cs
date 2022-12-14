@@ -105,7 +105,7 @@ public class cutsceenCharacter : SceneEndTriggerController
         playertalk3.SetActive(true);
         yield return new WaitForSeconds(5);
         playertalk3.SetActive(false);
-        speed = 3;
+        speed = 5;
         changeScene = true;
     }
     

@@ -413,7 +413,7 @@ MonoBehaviour:
   - {fileID: 1272222498}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.1
+  speed: 0.2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1 &140735268
