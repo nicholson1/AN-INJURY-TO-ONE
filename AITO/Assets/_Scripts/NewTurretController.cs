@@ -44,7 +44,7 @@ namespace ObjectPool.Gun
             if (detectTarget == null)
             {
                 _targets = Physics2D.OverlapCircleAll(this.transform.position, trackTriggerDist, TargetLayers);
-                Debug.Log(_targets.Length);
+                //Debug.Log(_targets.Length);
             }
 
             if (_targets.Length > 0)
