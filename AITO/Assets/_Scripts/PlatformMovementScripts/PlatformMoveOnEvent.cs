@@ -21,7 +21,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
     void Start()
     {
         //this.enabled = false;
-        step = speed * Time.deltaTime;
+        step = speed;
         c = Waypoints[0];
         finalIndex = Waypoints.Length - 1;
         startPos = new Vector3(transform.position.x, transform.position.y);
@@ -58,7 +58,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
                 //Debug.Log("moving");
                 
             }
-            transform.position = Vector2.MoveTowards(transform.position, c.position, step);
+            transform.position = Vector2.MoveTowards(transform.position, c.position, step * Time.deltaTime);
         }
         else
         {
@@ -66,7 +66,7 @@ public class PlatformMoveOnEvent : MonoBehaviour
 
             if (Vector3.Distance(transform.position, startPos) >= minDist)
             {
-                transform.position = Vector2.MoveTowards(transform.position, startPos, step);
+                transform.position = Vector2.MoveTowards(transform.position, startPos, step  * Time.deltaTime);
             }
         }
         

@@ -246,7 +246,7 @@ MonoBehaviour:
   - {fileID: 977353331}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.1
+  speed: 1
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &109386745
@@ -413,7 +413,7 @@ MonoBehaviour:
   - {fileID: 1272222498}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.2
+  speed: 1
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1 &140735268
@@ -468,7 +468,7 @@ MonoBehaviour:
   - {fileID: 1928450197}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1 &174974270
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   - {fileID: 140735269}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.1
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!4 &360516071 stripped
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   - {fileID: 2051301464}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &694210612
@@ -2528,7 +2528,7 @@ MonoBehaviour:
   - {fileID: 379883229}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!4 &844813507 stripped
@@ -2557,7 +2557,7 @@ MonoBehaviour:
   - {fileID: 803974200}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &885518180
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   - {fileID: 404844541}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.2
+  speed: 1
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1 &963194225
@@ -3085,7 +3085,7 @@ MonoBehaviour:
   - {fileID: 1111542112}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.2
+  speed: 1
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1060812534
@@ -8608,7 +8608,7 @@ MonoBehaviour:
   - {fileID: 1010071520}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1358243896
@@ -11365,7 +11365,7 @@ MonoBehaviour:
   - {fileID: 1172768680}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1389363935
@@ -11582,7 +11582,7 @@ MonoBehaviour:
   - {fileID: 1169879181}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1449317137
@@ -11673,7 +11673,7 @@ MonoBehaviour:
   - {fileID: 1782190663}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1473054670
@@ -12136,7 +12136,7 @@ MonoBehaviour:
   - {fileID: 174974271}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1550678305
@@ -26928,7 +26928,7 @@ MonoBehaviour:
   - {fileID: 465654505}
   c: {fileID: 0}
   curIndex: 0
-  speed: 0.4
+  speed: 2
   startPos: {x: 0, y: 0, z: 0}
   MoveToWaypoint: 0
 --- !u!1001 &1446827424467257739
